@@ -7,7 +7,7 @@ const MARK = 'data-vin-cent-highlight';
 export function launch({ adapter: suppliedAdapter, demo = false, mount = null } = {}) {
   if (window[INSTANCE]) { window[INSTANCE].focus(); return window[INSTANCE]; }
   if (!demo && !['blooket.com', 'www.blooket.com', 'play.blooket.com'].includes(location.hostname)) {
-    window.alert('Open a Blooket game before using V.I.N CENT. The separate demo uses sample data.');
+    window.alert('Open a Blooket game before using V.I.N.C.E.N.T. The separate demo uses sample data.');
     return null;
   }
   const previousFocus = document.activeElement;
@@ -18,7 +18,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   const root = host.attachShadow({ mode: 'open' });
   root.innerHTML = `<style>${panelCSS}</style>
     <section class="panel" role="dialog" aria-modal="false" aria-labelledby="vin-title">
-      <header><div class="heading"><h2 id="vin-title">V.I.N CENT</h2><button class="close" aria-label="Close panel">Close</button></div>
+      <header><div class="heading"><h2 id="vin-title">V.I.N.C.E.N.T</h2><button class="close" aria-label="Close panel">Close</button></div>
       <p class="subtitle"><span class="badge"></span><span class="mode"></span></p></header>
       <nav class="tabs" role="tablist" aria-label="Tool sections">
         <button role="tab" id="tab-answers" aria-controls="answers" aria-selected="true">Answers</button>

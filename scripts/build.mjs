@@ -7,7 +7,7 @@ const common = { bundle: true, format: 'iife', target: ['chrome110', 'edge110'],
 const result = await build({ ...common, entryPoints: ['src/bookmarklet.js'], minify: true, write: false });
 const code = result.outputFiles[0].text.trim();
 const bookmarklet = `javascript:void ${encodeURIComponent(code)}`;
-await writeFile('dist/vin-cent.js', code + '\n');
+await writeFile('dist/v.i.n.c.e.n.t.js', code + '\n');
 await writeFile('dist/bookmarklet.txt', bookmarklet + '\n');
 await writeFile('dist/bookmarklet-data.js', `window.VIN_BOOKMARKLET = ${JSON.stringify(bookmarklet)};\n`);
 await build({ ...common, entryPoints: ['src/demo.js'], outfile: 'dist/demo.js', minify: true });

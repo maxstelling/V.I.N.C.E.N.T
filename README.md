@@ -1,10 +1,10 @@
-# V.I.N CENT
+# V.I.N.C.E.N.T
 
 A small browser-tool research project, an interactive mockup, and a self-contained Blooket bookmarklet. Written in HTML, CSS and JavaScript.
 
 **The demo and controlled React tests are separate from live Blooket support. No current live-game, Chromebook hardware, or Windows 11 result is claimed.** Blooket’s [terms](https://www.blooket.com/terms) prohibit unauthorized cheats and scripts.
 
-![V.I.N CENT demo](artifacts/desktop-demo.png)
+![V.I.N.C.E.N.T demo](artifacts/desktop-demo.png)
 
 ## Open the mockup
 
@@ -17,7 +17,7 @@ Download the repository ZIP, extract it, and open **index.html** in Chrome or Ed
 
 ## Use the bookmarklet
 
-From the mockup’s Setup section, drag **V.I.N CENT** to your bookmarks bar, or copy the address into a new bookmark’s URL field. Open a Blooket game and select the saved bookmark.
+From the mockup’s Setup section, drag **V.I.N.C.E.N.T** to your bookmarks bar, or copy the address into a new bookmark’s URL field. Open a Blooket game and select the saved bookmark.
 
 The panel starts with all tools off. Missing answer data disables answer controls. Only mapped, finite numeric fields on a React class component are offered for editing. Value updates are labelled local and never claimed as server-confirmed. Hook-based answers can be read when the expected question shape is exposed; hook-only value editing is not implemented.
 

@@ -11,7 +11,7 @@ Research date: **12 November 2026**. These are static source observations, not p
 
 The [inspected historical script](https://github.com/LiL-Zapped/Blooket-GUI/blob/5a276104a8acf1c253e7b6ada075ad5074e491b8/The%20Cheats) demonstrates these approaches. It was inspected as text, never executed or imported. Its SHA-256 at inspection was `84f5cb0077a12927cfcc9ba8ff8525af428533b1d39b7e784f5d38c4f5e0161e`. The file also contains outbound logging and global function changes; those are not part of this implementation. No third-party cheat code is copied into this repository.
 
-## What V.I.N CENT implements
+## What V.I.N.C.E.N.T implements
 
 The bookmarklet runs inside the current game tab. It looks for React attachments on a bounded number of page elements and reads only known question shapes and explicitly mapped numeric fields. There is one adapter instance per catalogued mode, sharing the common reader. The panel itself uses a Shadow DOM so its styles and controls do not clash with the game.
 

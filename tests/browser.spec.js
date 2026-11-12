@@ -26,7 +26,7 @@ async function openBookmarklet(page) {
     document.body.append(anchor);
   }, bookmarklet);
   await page.locator('#test-bookmark').last().click();
-  await expect(panel(page).getByRole('dialog', { name: 'V.I.N CENT' })).toBeVisible();
+  await expect(panel(page).getByRole('dialog', { name: 'V.I.N.C.E.N.T' })).toBeVisible();
 }
 
 test('demo highlights correct answer, answers once, advances, and edits sample values', async ({ page }) => {

@@ -8,7 +8,7 @@ try {
   const page = await browser.newPage({ viewport: { width: 1366, height: 1200 }, deviceScaleFactor: 1 });
   const errors = []; page.on('pageerror', error => errors.push(error.message));
   const response = await page.goto('http://127.0.0.1:43917');
-  if (response.status() !== 200 || !(await page.title()).includes('V.I.N CENT')) throw new Error('Wrong preview server.');
+  if (response.status() !== 200 || !(await page.title()).includes('V.I.N.C.E.N.T')) throw new Error('Wrong preview server.');
   await page.locator('#vin-cent-panel').getByRole('button', { name: 'Highlight answers', exact: true }).click();
   await page.screenshot({ path: 'artifacts/desktop-demo.png' });
   await page.locator('#workspace').screenshot({ path: 'artifacts/workspace-demo.png' });

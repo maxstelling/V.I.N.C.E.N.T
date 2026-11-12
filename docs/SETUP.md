@@ -11,8 +11,8 @@ The mockup does not control another tab or connect to Blooket.
 ## Save the launcher
 
 1. Show the bookmarks bar with **Ctrl + Shift + B** in Chrome or Edge.
-2. In the mockup’s Setup section, drag the **V.I.N CENT** launcher to the bookmarks bar.
-3. Alternatively, select **Copy bookmark address**, create or edit a bookmark, name it `V.I.N CENT`, and paste the full copied address into its URL/address field.
+2. In the mockup’s Setup section, drag the **V.I.N.C.E.N.T** launcher to the bookmarks bar.
+3. Alternatively, select **Copy bookmark address**, create or edit a bookmark, name it `V.I.N.C.E.N.T`, and paste the full copied address into its URL/address field.
 4. If clipboard access is unavailable, the page shows a selected text box for manual copying. `dist/bookmarklet.txt` also contains the address.
 5. Check the saved address begins with `javascript:` and is complete. Save it as a bookmark, rather than searching for it in the address bar.
 
