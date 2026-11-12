@@ -26,4 +26,22 @@ function HooksFixture() {
   return h('main', null, h('h1', null, 'Controlled React hooks fixture'), ...answers(question, () => { window.fixtureClicks++; }),
     h('button', { onClick: () => setQuestion(makeQuestion(1)) }, 'Next'));
 }
-createRoot(document.getElementById('root')).render(h(params.has('hooks') ? HooksFixture : Fixture));
+function ModernAnswer({ answer, isCorrect, onClick, answerSent }) {
+  return h('button', { className: '_answerButton_fixture', onClick, disabled: answerSent }, answer);
+}
+function ModernQuestion({ question, currentIndex, questions, onAnswer, answerSent, correctnessAvailable }) {
+  return h('section', null, h('p', null, question.text), ...question.answers.map((answer, i) =>
+    h(ModernAnswer, { key: i, answer, isCorrect: correctnessAvailable && i === currentIndex % 2, onClick: onAnswer, answerSent })));
+}
+function ModernFixture() {
+  const [index, setIndex] = useState(0);
+  const [answered, setAnswered] = useState(false);
+  const feedbackOnly = params.has('feedback-only');
+  const questions = [0, 1, 2, 3].map(number => ({ text: 'Modern question ' + number, number, answers: ['Alpha', 'Beta'] }));
+  const question = questions[index];
+  return h('main', null, h('h1', null, 'Controlled React modern fixture'),
+    h(ModernQuestion, { question, currentIndex: index, questions, correctnessAvailable: !feedbackOnly || answered,
+      answerSent: feedbackOnly && answered, onAnswer: () => { window.fixtureClicks++; setAnswered(true); } }),
+    h('button', { id: 'fixture-next', onClick: () => { setIndex(i => i + 1); setAnswered(false); } }, 'Next'));
+}
+createRoot(document.getElementById('root')).render(h(params.has('modern') ? ModernFixture : params.has('hooks') ? HooksFixture : Fixture));

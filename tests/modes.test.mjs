@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { MODES, detectMode, validateValue } from '../src/modes.js';
+import { MODES, detectMode, detectPageMode, isBlooketHost, validateValue } from '../src/modes.js';
 import { questionFrom } from '../src/adapters/react.js';
 import { adapterCatalog } from '../src/adapters/index.js';
 import { readFile } from 'node:fs/promises';
@@ -26,6 +26,14 @@ test('value validation rejects blank, infinite, unsafe, fractional and out-of-ra
   assert.equal(validateValue('0', field), 0);
   assert.equal(validateValue('5', field), 5);
 });
+test('mode subdomains work with session paths without accepting lookalike domains', () => {
+  assert.equal(detectPageMode(new URL('https://gold.blooket.com/example-game/play/example-player')).id, 'gold-quest');
+  assert.equal(detectPageMode(new URL('https://factory.blooket.com/example-game/play/example-player')).id, 'factory');
+  assert.equal(detectPageMode(new URL('https://play.blooket.com/play/gold')).id, 'gold-quest');
+  for (const host of ['blooket.com.evil.example', 'evilblooket.com', 'blooket.com@evil.example', 'localhost']) assert.equal(isBlooketHost(host), false);
+  assert.equal(detectPageMode(new URL('https://id.blooket.com/gold')), null);
+  assert.equal(detectPageMode(new URL('https://gold.example.com/play/gold')), null);
+});
 test('question reader requires explicit answer data and supports class and hook shapes', () => {
   assert.equal(questionFrom({ state: { question: { question: 'Q', answers: ['A'] } }, props: {} }), null);
   assert.equal(questionFrom({ state: { question: { question: 'Q', correctAnswers: [{}] } }, props: {} }), null);
@@ -33,7 +41,7 @@ test('question reader requires explicit answer data and supports class and hook 
   assert.deepEqual(questionFrom({ state: { question: 'Hook Q', correctAnswers: ['A'] }, props: {} })?.correct, ['A']);
   assert.deepEqual(questionFrom({ state: {}, props: { client: { question: { question: 'Client Q', correctAnswer: 'A' } } } }).correct, ['A']);
 });
-test('build contains self-contained runtime and preserves untested live evidence', async () => {
+test('build keeps observed live limitations separate from untested modes', async () => {
   const bookmarklet = (await readFile('dist/bookmarklet.txt', 'utf8')).trim();
   assert.ok(bookmarklet.startsWith('javascript:void '));
   const source = decodeURIComponent(bookmarklet.slice('javascript:void '.length));
@@ -41,11 +49,12 @@ test('build contains self-contained runtime and preserves untested live evidence
   assert.doesNotMatch(source, /\beval\(|\bfetch\(|XMLHttpRequest|WebSocket|sendBeacon|document\.cookie|localStorage/);
   assert.doesNotMatch(source, /sourceMappingURL/);
   const support = JSON.parse(await readFile('docs/support.json', 'utf8'));
-  assert.equal(support.liveTestedOn, null);
+  assert.equal(support.liveTestedOn, '2026-11-12');
   for (const record of support.records) {
     assert.ok(['live', 'solo', 'homework'].includes(record.context));
     for (const feature of Object.values(record.features)) {
-      assert.equal(feature.testedOn, null);
+      assert.equal(feature.testedOn, record.id === 'gold-quest' && record.context === 'live' ? '2026-11-12' : null);
+      if (record.id === 'gold-quest' && record.context === 'live') assert.equal(feature.result, 'unsupported');
       assert.ok(['not tested', 'unsupported'].includes(feature.result));
       assert.ok(feature.source.startsWith('https://github.com/'));
     }

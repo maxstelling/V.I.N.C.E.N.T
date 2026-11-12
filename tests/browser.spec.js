@@ -8,16 +8,58 @@ const panel = page => page.locator('#vin-cent-panel');
 
 // A real React 18 app is served at a mocked Blooket origin. These tests never
 // contact Blooket and must never be represented as live-game evidence.
-async function fixture(page, route = '/play/gold', query = '') {
-  await page.route('https://play.blooket.com/**', async request => {
+async function fixture(page, route = '/play/gold', query = '', origin = 'https://play.blooket.com') {
+  await page.route(origin + '/**', async request => {
     const url = new URL(request.request().url());
     const path = url.pathname.startsWith('/tests/') ? url.pathname : '/tests/fixture.html';
     const response = await page.request.get(local + path);
     await request.fulfill({ response });
   });
-  await page.goto('https://play.blooket.com' + route + query);
+  await page.goto(origin + route + query);
   await expect(page.getByRole('heading')).toContainText('Controlled React');
 }
+
+test('mode-hosted game URLs open the panel and detect Gold Quest', async ({ page }) => {
+  await fixture(page, '/example-game/play/example-player', '', 'https://gold.blooket.com');
+  await openBookmarklet(page);
+  await expect(panel(page).locator('.mode')).toHaveText('Gold Quest');
+  await panel(page).getByRole('button', { name: 'Highlight answers', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await panel(page).getByRole('tab', { name: 'Game values' }).click();
+  await expect(panel(page).getByLabel('Your gold')).toBeVisible();
+});
+
+test('modern choice flags follow the current React tree across question changes', async ({ page }) => {
+  await fixture(page, '/example-game/play/example-player', '?modern', 'https://gold.blooket.com');
+  await openBookmarklet(page);
+  await panel(page).getByRole('button', { name: 'Highlight answers', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await panel(page).getByRole('button', { name: 'Auto-answer', exact: true }).click();
+  await expect.poll(() => page.evaluate(() => window.fixtureClicks)).toBe(1);
+  await page.locator('#fixture-next').click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Beta');
+  await expect.poll(() => page.evaluate(() => window.fixtureClicks)).toBe(2);
+  await page.locator('#fixture-next').click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await expect.poll(() => page.evaluate(() => window.fixtureClicks)).toBe(3);
+  await panel(page).getByRole('button', { name: 'Stop All', exact: true }).click();
+  await panel(page).getByRole('tab', { name: 'Support' }).click();
+  await panel(page).getByRole('button', { name: 'Check page layout' }).click();
+  await expect(panel(page).locator('#layout-report')).toContainText('readableQuestions: 1');
+});
+
+test('feedback-only correctness never enables an unanswered choice', async ({ page }) => {
+  await fixture(page, '/example-game/play/example-player', '?modern&feedback-only', 'https://gold.blooket.com');
+  await openBookmarklet(page);
+  await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+  await page.getByRole('button', { name: 'Alpha', exact: true }).click();
+  await panel(page).getByRole('button', { name: 'Refresh data', exact: true }).click();
+  await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+  expect(await page.evaluate(() => window.fixtureClicks)).toBe(1);
+  await page.locator('#fixture-next').click();
+  await panel(page).getByRole('button', { name: 'Refresh data', exact: true }).click();
+  await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+});
 async function openBookmarklet(page) {
   // Exercise actual javascript: URL execution, not eval(bookmarklet).
   await page.evaluate(address => {

@@ -2,23 +2,53 @@
   "checkedOn": "2026-11-12",
   "environment": "macOS Chromium; controlled React fixtures, not live Blooket",
   "unitChecks": {
-    "passed": 5,
+    "passed": 6,
     "failed": 0
   },
   "browserTests": {
-    "passed": 41,
+    "passed": 44,
     "failed": 0,
     "skipped": 0
   },
-  "durationMs": 11061.144,
+  "durationMs": 34498.341,
   "cases": [
+    {
+      "name": "mode-hosted game URLs open the panel and detect Gold Quest",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6518
+        }
+      ]
+    },
+    {
+      "name": "modern choice flags follow the current React tree across question changes",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 8138
+        }
+      ]
+    },
+    {
+      "name": "feedback-only correctness never enables an unanswered choice",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 6518
+        }
+      ]
+    },
     {
       "name": "demo highlights correct answer, answers once, advances, and edits sample values",
       "outcome": "expected",
       "results": [
         {
           "status": "passed",
-          "durationMs": 1536
+          "durationMs": 2453
         }
       ]
     },
@@ -28,7 +58,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 598
+          "durationMs": 1212
         }
       ]
     },
@@ -38,7 +68,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1866
+          "durationMs": 2852
         }
       ]
     },
@@ -48,7 +78,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 452
+          "durationMs": 352
         }
       ]
     },
@@ -58,7 +88,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 422
+          "durationMs": 593
         }
       ]
     },
@@ -68,7 +98,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 300
+          "durationMs": 431
         }
       ]
     },
@@ -78,7 +108,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 377
+          "durationMs": 483
         }
       ]
     },
@@ -88,7 +118,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 405
+          "durationMs": 378
         }
       ]
     },
@@ -98,7 +128,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 446
+          "durationMs": 683
         }
       ]
     },
@@ -108,7 +138,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 565
+          "durationMs": 1009
         }
       ]
     },
@@ -118,7 +148,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 525
+          "durationMs": 576
         }
       ]
     },
@@ -128,7 +158,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 550
+          "durationMs": 681
         }
       ]
     },
@@ -138,7 +168,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 490
+          "durationMs": 564
         }
       ]
     },
@@ -148,7 +178,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 509
+          "durationMs": 578
         }
       ]
     },
@@ -158,7 +188,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 522
+          "durationMs": 691
         }
       ]
     },
@@ -168,7 +198,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 517
+          "durationMs": 617
         }
       ]
     },
@@ -178,7 +208,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 362
+          "durationMs": 500
         }
       ]
     },
@@ -188,7 +218,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 422
+          "durationMs": 912
         }
       ]
     },
@@ -198,7 +228,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 551
+          "durationMs": 1022
         }
       ]
     },
@@ -208,7 +238,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 426
+          "durationMs": 844
         }
       ]
     },
@@ -218,7 +248,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 356
+          "durationMs": 690
         }
       ]
     },
@@ -228,7 +258,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 600
+          "durationMs": 666
         }
       ]
     },
@@ -238,7 +268,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 419
+          "durationMs": 591
         }
       ]
     },
@@ -248,7 +278,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 431
+          "durationMs": 870
         }
       ]
     },
@@ -258,7 +288,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 483
+          "durationMs": 927
         }
       ]
     },
@@ -268,7 +298,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 603
+          "durationMs": 974
         }
       ]
     },
@@ -278,7 +308,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 403
+          "durationMs": 430
         }
       ]
     },
@@ -288,7 +318,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 360
+          "durationMs": 492
         }
       ]
     },
@@ -298,7 +328,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 520
+          "durationMs": 684
         }
       ]
     },
@@ -308,7 +338,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 353
+          "durationMs": 433
         }
       ]
     },
@@ -318,7 +348,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 391
+          "durationMs": 469
         }
       ]
     },
@@ -328,7 +358,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3864
+          "durationMs": 3928
         }
       ]
     },
@@ -338,7 +368,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 627
+          "durationMs": 873
         }
       ]
     },
@@ -348,7 +378,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 579
+          "durationMs": 1328
         }
       ]
     },
@@ -358,7 +388,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1208
+          "durationMs": 1191
         }
       ]
     },
@@ -368,7 +398,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 683
+          "durationMs": 1111
         }
       ]
     },
@@ -378,7 +408,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 290
+          "durationMs": 714
         }
       ]
     },
@@ -388,7 +418,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 251
+          "durationMs": 278
         }
       ]
     },
@@ -398,7 +428,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 217
+          "durationMs": 261
         }
       ]
     },
@@ -408,7 +438,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 230
+          "durationMs": 236
         }
       ]
     },
@@ -418,7 +448,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 248
+          "durationMs": 217
         }
       ]
     }

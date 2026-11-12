@@ -31,7 +31,7 @@ The catalog follows [Blooket’s official mode previews](https://help.blooket.co
 
 A bookmarklet is a saved `javascript:` URL. The browser executes it against the active page when allowed. A separate mockup website cannot directly read another site’s tab because of the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy). A browser extension is another possible delivery method, but it adds installation and permissions and is outside this release. Extension scripts also have [separate execution worlds](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts), so copying a page script into an extension does not guarantee access to the same variables.
 
-The generated bookmarklet contains its runtime and styles. It has no remote loader, `eval`, credential reader or outbound logging. Browser policy and a site’s Content Security Policy can still block [javascript: URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/javascript). Its roughly 26 KB address needs real target-browser testing; source size alone does not establish a browser limit or compatibility.
+The generated bookmarklet contains its runtime and styles. It has no remote loader, `eval`, credential reader or outbound logging. Browser policy and a site’s Content Security Policy can still block [javascript: URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/javascript). Its roughly 31 KB address has opened in native Safari; source size alone does not establish other target-browser compatibility.
 
 ## Blooket’s rules
 
@@ -45,4 +45,4 @@ Blooket’s [Terms of Service](https://www.blooket.com/terms), checked on the re
 - Keep unavailable Plus and seasonal modes untested. Recheck after site updates.
 - Do not publish session data, real player names, cookies, screenshots of private games or credentials as evidence.
 
-No current live game has been tested. Controlled fixture tests establish the implementation’s behaviour only.
+The current Gold Quest live layout was checked in native Safari. No usable correctness data was found before submission; feedback exposed correctness only after a manual answer. The older class-state value editor was also unavailable. Those live tools are marked unsupported in the checked layout. See [the live check](VALIDATION.md#safari-live-check). Other modes remain untested; controlled fixtures do not establish their live compatibility.

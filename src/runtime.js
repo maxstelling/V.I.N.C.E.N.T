@@ -1,12 +1,13 @@
 import panelCSS from './panel.css';
 import { createLiveAdapter } from './adapters/index.js';
+import { isBlooketHost } from './modes.js';
 
 const INSTANCE = '__VIN_CENT_PANEL__';
 const MARK = 'data-vin-cent-highlight';
 
 export function launch({ adapter: suppliedAdapter, demo = false, mount = null } = {}) {
   if (window[INSTANCE]) { window[INSTANCE].focus(); return window[INSTANCE]; }
-  if (!demo && !['blooket.com', 'www.blooket.com', 'play.blooket.com'].includes(location.hostname)) {
+  if (!demo && !isBlooketHost(location.hostname)) {
     window.alert('Open a Blooket game before using V.I.N.C.E.N.T. The separate demo uses sample data.');
     return null;
   }
@@ -34,7 +35,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
         <section id="values" role="tabpanel" aria-labelledby="tab-values" hidden><div id="fields"></div><p class="note">Local state edits can trigger the game’s normal effects. Server acceptance is not verified.</p></section>
         <section id="support" role="tabpanel" aria-labelledby="tab-support" hidden><p class="note" id="evidence"></p><ul>
           <li>Missing page data disables a feature.</li><li>Stop All ends automation and clears highlights.</li><li>Close cannot undo answers or values already submitted.</li><li>School settings or page security may block the launcher.</li>
-        </ul></section>
+        </ul><button id="check-layout">Check page layout</button><pre id="layout-report" style="white-space:pre-wrap;overflow-wrap:anywhere;font-size:11px" hidden></pre></section>
         <p class="small-label">Activity</p><div class="status" role="status" aria-live="polite"></div>
       </div>
       <footer><button class="stop">Stop All</button><button class="refresh">Refresh data</button></footer>
@@ -163,6 +164,20 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   $('#auto').addEventListener('click', () => { auto = !auto; updateRunState(); });
   $('.stop').addEventListener('click', () => stop());
   $('.refresh').addEventListener('click', () => { stop('Data refreshed. All tools off.'); refresh({ replaceAdapter: true }); });
+  $('#check-layout').addEventListener('click', () => {
+    const report = $('#layout-report'); report.hidden = false;
+    try {
+      report.replaceChildren();
+      const details = adapter?.diagnostics ? adapter.diagnostics() : { note: 'Page layout checks are available in a detected live game.' };
+      for (const [key, value] of Object.entries(details)) {
+        for (const row of Array.isArray(value) ? value.length ? value : ['None found'] : [String(value)]) {
+          const line = document.createElement('div'); line.textContent = `${key}: ${row}`;
+          line.style.marginBottom = '12px'; report.append(line);
+        }
+      }
+    }
+    catch { report.textContent = 'This page layout could not be inspected.'; }
+  });
   const tabs = Array.from(root.querySelectorAll('[role=tab]'));
   function selectTab(tab) {
     tabs.forEach(other => {

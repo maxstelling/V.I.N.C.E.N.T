@@ -51,6 +51,23 @@ export function detectMode(pathname) {
   return MODES.find(mode => mode.routes.includes(route)) ?? null;
 }
 
+export function isBlooketHost(hostname) {
+  const host = hostname.toLowerCase().replace(/\.$/, '');
+  return host === 'blooket.com' || host.endsWith('.blooket.com');
+}
+
+export function detectPageMode(pageLocation) {
+  const host = pageLocation.hostname.toLowerCase().replace(/\.$/, '');
+  if (!isBlooketHost(host)) return null;
+  // Current games use mode.blooket.com/<game>/play/<player>. Game and player
+  // identifiers are neither needed for detection nor saved by this tool.
+  const subdomain = host.endsWith('.blooket.com') ? host.slice(0, -'.blooket.com'.length) : '';
+  const hostedMode = MODES.find(mode => mode.routes.includes(subdomain));
+  if (hostedMode) return hostedMode;
+  return ['blooket.com', 'www.blooket.com', 'play.blooket.com'].includes(host)
+    ? detectMode(pageLocation.pathname) : null;
+}
+
 export function validateValue(raw, spec) {
   if (String(raw).trim() === '') throw new Error('Enter a number.');
   const value = Number(raw);

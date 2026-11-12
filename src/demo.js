@@ -75,7 +75,7 @@ function renderCoverage() {
     const title = document.createElement('td'); title.textContent = m.name;
     if (m.plus || m.seasonal) { const tag = document.createElement('span'); tag.className = 'tag'; tag.textContent = m.plus ? 'Plus' : 'Seasonal'; title.append(tag); }
     row.append(title);
-    for (const value of [m.contexts.join(' / '), 'Not tested', m.fields.length ? 'Not tested' : 'Unsupported in v1']) {
+    for (const value of [m.contexts.join(' / '), m.id === 'gold-quest' ? 'Unsupported in checked live layout' : 'Not tested', m.id === 'gold-quest' ? 'Unsupported in checked live layout' : m.fields.length ? 'Not tested' : 'Unsupported in v1']) {
       const cell = document.createElement('td'); cell.textContent = value; row.append(cell);
     }
     return row;

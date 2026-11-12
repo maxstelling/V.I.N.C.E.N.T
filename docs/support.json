@@ -1,6 +1,6 @@
 {
   "researchedOn": "2026-11-12",
-  "liveTestedOn": null,
+  "liveTestedOn": "2026-11-12",
   "records": [
     {
       "mode": "Battle Royale",
@@ -12,7 +12,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -45,7 +45,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -78,7 +78,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -111,7 +111,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -144,7 +144,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -177,7 +177,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -210,7 +210,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -243,7 +243,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -276,7 +276,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -309,7 +309,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -342,7 +342,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -375,7 +375,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -408,7 +408,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -441,7 +441,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -474,7 +474,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -507,7 +507,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -540,7 +540,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -573,7 +573,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -606,7 +606,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -636,31 +636,34 @@
       "plus": false,
       "seasonal": false,
       "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
-      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "routeEvidence": "Native Safari check: Gold Quest mode-hosted URL detected. Session identifiers are not stored.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
-          "testedOn": null,
-          "result": "not tested"
+          "testedOn": "2026-11-12",
+          "result": "unsupported",
+          "verificationSource": "https://github.com/maxstelling/V.I.N.C.E.N.T/blob/main/docs/VALIDATION.md#safari-live-check"
         },
         "autoAnswer": {
           "method": "Click one matching visible answer per question, only when enabled.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
-          "testedOn": null,
-          "result": "not tested"
+          "testedOn": "2026-11-12",
+          "result": "unsupported",
+          "verificationSource": "https://github.com/maxstelling/V.I.N.C.E.N.T/blob/main/docs/VALIDATION.md#safari-live-check"
         },
         "values": {
           "method": "Request local class state updates for observed keys: gold. No server acceptance claim.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
-          "testedOn": null,
-          "result": "not tested"
+          "testedOn": "2026-11-12",
+          "result": "unsupported",
+          "verificationSource": "https://github.com/maxstelling/V.I.N.C.E.N.T/blob/main/docs/VALIDATION.md#safari-live-check"
         }
       },
-      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+      "note": "Tested Safari live layout: no usable correctness data before submission; correctness flags appeared after manual answer feedback. No class-state value fields were available."
     },
     {
       "mode": "Laser Tag",
@@ -672,7 +675,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -705,7 +708,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -738,7 +741,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -771,7 +774,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -804,7 +807,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -837,7 +840,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -870,7 +873,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -903,7 +906,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -936,7 +939,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -969,7 +972,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1002,7 +1005,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1035,7 +1038,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1068,7 +1071,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1101,7 +1104,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1134,7 +1137,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1167,7 +1170,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1200,7 +1203,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1233,7 +1236,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1266,7 +1269,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1299,7 +1302,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1332,7 +1335,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1365,7 +1368,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1398,7 +1401,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1431,7 +1434,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,
@@ -1464,7 +1467,7 @@
       "routeEvidence": "Candidate route names; current live detection has not been verified.",
       "features": {
         "highlight": {
-          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "method": "Read exposed correct-answer text or current React choice flags; mark matching visible answer elements.",
           "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
           "researchedOn": "2026-11-12",
           "testedOn": null,

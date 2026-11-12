@@ -32,6 +32,14 @@ Google documents how [managed Chrome can restrict features](https://support.goog
 
 Use current Chrome or Edge. Save the bookmark in that browser, open the game, then select the bookmark. There is no installer, EXE or Windows service. Edge’s [JavaScript console documentation](https://learn.microsoft.com/en-us/microsoft-edge/devtools/console/console-javascript) explains how browser scripts run; pasting code into DevTools is not required by this launcher.
 
+## Safari on Mac
+
+Open the updated local `index.html`. Select **Copy bookmark address**. In Safari’s bookmarks sidebar, right-click the saved V.I.N.C.E.N.T bookmark, choose **Edit Address**, replace the whole address with the copied address, and select Done. Then open the game tab and select the saved bookmark.
+
+Current games can use a separate address such as `gold.blooket.com`, with the game and player identifiers in the path. The launcher now accepts Blooket subdomains and detects the mode from the game hostname. It still rejects lookalike domains. Updating the page or repository alone does not update an existing self-contained bookmark: replace its saved address after updates.
+
+If Blooket reports **Disconnected** or **Failed to join**, rejoin an active game first. Opening the panel cannot restore an expired game session.
+
 ## Use and stop
 
 - **Highlight answers** marks matching readable correct choices.
@@ -50,10 +58,11 @@ Check the active tab is a Blooket game and the saved address is complete. Browse
 | Environment | Result |
 |---|---|
 | Local Chromium on macOS, controlled sample pages | See [validation record](VALIDATION.md) |
+| Native Safari on Mac, Gold Quest live | Launcher and mode detection work; answer/value tools unsupported in the checked layout |
 | Real Chromebook Chrome | Not tested: hardware unavailable |
 | School-managed Chromebook | Not tested: managed device unavailable |
 | Windows 11 Chrome | Not tested: OS unavailable |
 | Windows 11 Edge | Not tested: OS unavailable |
-| Current authenticated Blooket game | Not tested: no controlled signed-in session provided |
+| Other live Blooket modes and solo/homework variants | Not tested |
 
 Browser viewport tests are layout checks, not proof of a physical Chromebook or Windows 11 installation. Blooket’s [terms](https://www.blooket.com/terms) prohibit unauthorized cheats and scripts.

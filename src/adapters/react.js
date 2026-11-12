@@ -50,9 +50,7 @@ export function questionFrom(view) {
 }
 
 const normalize = text => String(text).replace(/\s+/g, ' ').trim();
-export function answerTargets(doc, question) {
-  if (!question) return [];
-  const correct = new Set(question.correct.map(normalize));
+function visibleAnswerElements(doc) {
   const selector = '[data-vin-answer], button[data-answer], [class*="answerContainer"], [class*="answerButton"], [role="button"][class*="answer"], button[class*="answer"]';
   const elements = Array.from(doc.querySelectorAll(selector));
   return elements.filter(el => {
@@ -62,7 +60,63 @@ export function answerTargets(doc, question) {
     if (el.checkVisibility?.({ checkOpacity: true, checkVisibilityCSS: true }) === false) return false;
     const style = doc.defaultView.getComputedStyle(el);
     if (style.visibility !== 'visible' || style.opacity === '0') return false;
+    return true;
+  });
+}
+
+export function answerTargets(doc, question) {
+  if (!question) return [];
+  const correct = new Set(question.correct.map(normalize));
+  return visibleAnswerElements(doc).filter(el => {
     const text = el.getAttribute('data-answer') ?? el.querySelector('[class*="answerText"]')?.textContent ?? el.textContent;
     return correct.has(normalize(text));
   });
+}
+
+function currentElementFiber(element) {
+  const key = Object.keys(element).find(name => /^__react(Fiber|InternalInstance)\$/.test(name));
+  let fiber = key ? element[key] : null;
+  let root = fiber;
+  const seen = new Set();
+  while (root?.return && !seen.has(root) && seen.size < 100) { seen.add(root); root = root.return; }
+  // React's DOM attachment can point to the alternate tree after a render.
+  // Compare the HostRoot with FiberRoot.current before reading button props.
+  if (root?.stateNode?.current && root.stateNode.current !== root && fiber?.alternate) fiber = fiber.alternate;
+  return fiber;
+}
+
+export function exposedChoiceQuestion(doc) {
+  const choices = [];
+  for (const element of visibleAnswerElements(doc)) {
+    let fiber = currentElementFiber(element);
+    let correctness;
+    let question;
+    let questionIndex;
+    const seen = new Set();
+    while (fiber && !seen.has(fiber) && seen.size < 24) {
+      seen.add(fiber);
+      const props = fiber.memoizedProps;
+      if (props && typeof props === 'object') {
+        if (correctness === undefined && Object.hasOwn(props, 'answer') && typeof props.isCorrect === 'boolean') correctness = props.isCorrect;
+        const candidate = props.question;
+        if (!question && candidate && typeof candidate === 'object' && typeof candidate.text === 'string' && Array.isArray(candidate.answers)) question = candidate;
+        if (questionIndex === undefined && Number.isInteger(props.currentIndex) && Array.isArray(props.questions)) questionIndex = props.currentIndex;
+      }
+      fiber = fiber.return;
+    }
+    if (typeof correctness === 'boolean' && question) choices.push({ element, correctness, question, questionIndex });
+  }
+  if (!choices.length) return null;
+  // Require a single current question and at least two independently labelled
+  // choices. A missing flag is not treated as an incorrect answer.
+  const question = choices[0].question;
+  if (choices.length < 2 || choices.some(choice => choice.question !== question)) return null;
+  const correct = choices.filter(choice => choice.correctness);
+  if (!correct.length) return null;
+  return {
+    question: { object: question, correct: correct.map(choice => normalize(choice.element.textContent)),
+      key: JSON.stringify([question.text, question.number ?? null, choices[0].questionIndex ?? null,
+        choices.map(choice => normalize(choice.element.textContent))]) },
+    targets: correct.map(choice => choice.element)
+  };
 }
