@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="V.I.N CENT: browser-tool research, an interactive Blooket demo, and a self-contained bookmarklet.">
+  <title>V.I.N CENT — Browser tools, explained.</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2379afff'/%3E%3Cpath d='M16 18l16 30 16-30h-9l-7 15-7-15z' fill='%230d1729'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="dist/bookmarklet-data.js" defer></script>
+  <script src="dist/demo.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="site-header"><a class="brand" href="#"><span class="brand-mark" aria-hidden="true">V.</span><span>V.I.N CENT</span></a>
+    <nav aria-label="Main navigation"><a href="#workspace">Try the demo</a><a href="#setup">Setup</a><a href="#coverage">Support</a><a class="repo" href="https://github.com/maxstelling/V.I.N-CENT">View source <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="intro">
+      <p class="eyebrow"><span class="dot"></span> BROWSER TOOLS / RESEARCH EDITION</p>
+      <h1>A closer look<br>at <span>how games work.</span></h1>
+      <p class="lead">Explore browser scripts, try the controls, and see exactly what is supported. Start with sample data. Every live claim needs evidence.</p>
+      <div class="intro-actions"><a class="primary" href="#workspace">Open the workspace <span aria-hidden="true">↓</span></a><span class="quiet">HTML · CSS · JavaScript</span></div>
+      <div class="facts"><span><b>01</b> Self-contained launcher</span><span><b>02</b> No account needed for demo</span><span><b>03</b> Automation starts off</span></div>
+    </section>
+
+    <section id="workspace" class="workspace" aria-labelledby="workspace-title">
+      <div class="workspace-top"><div><span class="workspace-dot" aria-hidden="true"></span><h2 id="workspace-title">THE WORKSPACE</h2></div><span class="demo-label">SAMPLE DATA ONLY</span></div>
+      <div class="workspace-grid">
+        <div class="sample-game">
+          <div class="game-bar"><label for="demo-mode">Preview mode</label><select id="demo-mode"></select><span class="sample-chip">Demo</span></div>
+          <div class="score-line"><span>YOUR DEMO VALUES</span><strong id="demo-score">Gold · 250</strong></div>
+          <div class="question-card"><p class="eyebrow">QUESTION <span id="question-number">01</span></p><h3 id="question-text">Which part of a website handles its appearance?</h3><p>Choose an answer, or try the tools beside the question.</p></div>
+          <div id="demo-answers" class="answer-grid"></div>
+          <div class="game-footer"><p id="demo-feedback" role="status" aria-live="polite">Your next move is up to you.</p><button id="next-question" class="text-button">Next question <span aria-hidden="true">→</span></button></div>
+          <div class="sample-explainer"><span class="mini-icon" aria-hidden="true">i</span><p>This is a small original quiz, separate from Blooket. The panel uses sample data here and page data in the bookmarklet.</p></div>
+        </div>
+        <aside class="panel-slot" aria-label="Interactive tool panel"><div id="demo-panel"></div><button id="reopen-panel" class="secondary" hidden>Open demo panel</button></aside>
+      </div>
+    </section>
+
+    <section id="setup" class="section" aria-labelledby="setup-title">
+      <div class="section-title"><div><p class="eyebrow">TAKE IT WITH YOU</p><h2 id="setup-title">One bookmark. Your browser.</h2></div><span class="pill">Live compatibility unverified</span></div>
+      <div class="setup-grid"><div class="install-card"><span class="step">01 / SAVE</span><h3>Add the launcher</h3><p>Drag this button to your bookmarks bar. You can also copy its address into a new bookmark’s URL field.</p><a id="bookmarklet-link" class="primary launcher" href="#setup">V.I.N CENT <span aria-hidden="true">↗</span></a><div class="copy-actions"><button id="copy-bookmarklet" class="text-button">Copy bookmark address</button><a href="dist/bookmarklet.txt" download>Download address</a></div><p id="copy-status" class="quiet" role="status" aria-live="polite">All launcher code is included in the bookmark.</p></div>
+      <div class="install-card"><span class="step">02 / OPEN</span><h3>Run it inside the game</h3><p>Open a Blooket game in the same browser, then select the saved bookmark. Start one tool at a time. Use Stop All to end automation.</p><details><summary>Chromebook</summary><p>In Chrome, show the bookmarks bar with Ctrl + Shift + B. Save the launcher and select it while the game tab is open. Personal and school devices may have different rules.</p></details><details><summary>Windows 11</summary><p>Use current Chrome or Edge. Show the bookmarks bar with Ctrl + Shift + B, save the launcher, then select it on the game tab. No Windows app is required.</p></details><details><summary>If the bookmark does not open</summary><p>Check the saved address starts with javascript:. Browser or page security can block it. On a school device, ask the administrator about allowed tools. There is no restriction bypass in this project.</p></details></div></div>
+      <p class="section-note">The demo works without installing anything. Live Blooket, Chromebook hardware and Windows 11 support have not been verified. <a href="docs/SETUP.md">Read the full setup guide →</a></p>
+    </section>
+
+    <section id="coverage" class="section" aria-labelledby="coverage-title">
+      <div class="section-title"><div><p class="eyebrow">EVIDENCE BEFORE CLAIMS</p><h2 id="coverage-title">Every mode has a record.</h2></div><span class="pill" id="mode-count"></span></div>
+      <p class="section-description">The full current mode list, including Plus and seasonal modes. “Not tested” means no live result is available. The demo is a separate test.</p>
+      <label class="search-label" for="mode-search">Find a mode</label><input id="mode-search" type="search" placeholder="Search modes…">
+      <div class="table-wrap"><table><caption class="sr-only">Mode coverage and live testing status</caption><thead><tr><th scope="col">Game mode</th><th scope="col">Available play</th><th scope="col">Answer tools</th><th scope="col">Value tools</th></tr></thead><tbody id="coverage-rows"></tbody></table></div>
+      <p class="section-note"><a href="docs/SUPPORT.md">Methods, sources and test dates →</a><span id="search-count" role="status" aria-live="polite"></span></p>
+    </section>
+    <section class="research-strip"><div><p class="eyebrow">UNDER THE SURFACE</p><h2>Read it. Understand it. Check it.</h2><p>Learn about page elements, React state, answer data and server checks in the research notes.</p></div><a class="secondary" href="docs/RESEARCH.md">Read the research <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="site-footer"><span class="brand">V.I.N CENT</span><p>Independent research project. Not affiliated with Blooket.</p><a href="https://www.blooket.com/terms">Blooket terms</a></footer>
+</body>
+</html>

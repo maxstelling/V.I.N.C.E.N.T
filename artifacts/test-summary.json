@@ -1,0 +1,416 @@
+{
+  "checkedOn": "2026-11-12",
+  "environment": "macOS Chromium; controlled React fixtures, not live Blooket",
+  "unitChecks": {
+    "passed": 5,
+    "failed": 0
+  },
+  "browserTests": {
+    "passed": 40,
+    "failed": 0,
+    "skipped": 0
+  },
+  "durationMs": 10502.395,
+  "cases": [
+    {
+      "name": "demo highlights correct answer, answers once, advances, and edits sample values",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1451
+        }
+      ]
+    },
+    {
+      "name": "demo starts off, resets on mode switch and can close and reopen",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 531
+        }
+      ]
+    },
+    {
+      "name": "keyboard tab controls, Escape, coverage search and copy fallback work",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1975
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Battle Royale adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 293
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Blook Rush adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 405
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Busy Bees adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 312
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Classic adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 453
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Coco Cabana adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 354
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Cocoa Cottage adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 450
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Crazy Kingdom adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 595
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Cyber Hack adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 609
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Deceptive Dinos adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 492
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Café adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 509
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Factory adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 525
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Fishing Frenzy adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 504
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Gold Quest adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 548
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Laser Tag adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 407
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Mini Mine adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 327
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Monster Brawl adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 516
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Pirate Pool adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 374
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Plushie Panic adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 373
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Racing adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 530
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Star Grazer adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 384
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Study adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 417
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Tower Defense adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 537
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Tower Defense 2 adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 527
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Zorblitz adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 392
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Candy Quest adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 399
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Santa’s Workshop adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 515
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Egg Hunt adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 384
+        }
+      ]
+    },
+    {
+      "name": "React fixture: Tag or Treat adapter detects page data without live claims",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 380
+        }
+      ]
+    },
+    {
+      "name": "bookmarklet is a singleton, auto answers once, Stop All and Close clean up",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 3811
+        }
+      ]
+    },
+    {
+      "name": "missing answers, unknown routes and hook-only values fail clearly",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 639
+        }
+      ]
+    },
+    {
+      "name": "navigation stops automation and stale value edits cannot change the previous mode",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 1225
+        }
+      ]
+    },
+    {
+      "name": "invalid values do not update state; stopping preserves already applied values",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 535
+        }
+      ]
+    },
+    {
+      "name": "unrelated sites are rejected by the actual launcher",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 275
+        }
+      ]
+    },
+    {
+      "name": "page CSP blocks javascript URLs rather than being bypassed",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 248
+        }
+      ]
+    },
+    {
+      "name": "demo layout fits 1366px and has no browser errors",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 248
+        }
+      ]
+    },
+    {
+      "name": "demo layout fits 768px and has no browser errors",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 314
+        }
+      ]
+    },
+    {
+      "name": "demo layout fits 390px and has no browser errors",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 243
+        }
+      ]
+    }
+  ]
+}

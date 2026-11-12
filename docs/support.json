@@ -1,0 +1,1491 @@
+{
+  "researchedOn": "2026-11-12",
+  "liveTestedOn": null,
+  "records": [
+    {
+      "mode": "Battle Royale",
+      "id": "battle-royale",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Blook Rush",
+      "id": "blook-rush",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: numBlooks, numDefense. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Busy Bees",
+      "id": "busy-bees",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Classic",
+      "id": "classic",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Coco Cabana",
+      "id": "coco-cabana",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Cocoa Cottage",
+      "id": "cocoa-cottage",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Crazy Kingdom",
+      "id": "crazy-kingdom",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: guestScore. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Crazy Kingdom",
+      "id": "crazy-kingdom",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: guestScore. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Cyber Hack",
+      "id": "cyber-hack",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: crypto. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Deceptive Dinos",
+      "id": "deceptive-dinos",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: fossils, fossilMult. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Café",
+      "id": "cafe",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cafeCash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Café",
+      "id": "cafe",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cafeCash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Café",
+      "id": "cafe",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cafeCash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Factory",
+      "id": "factory",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Factory",
+      "id": "factory",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Factory",
+      "id": "factory",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: cash. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Fishing Frenzy",
+      "id": "fishing-frenzy",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: weight, lure. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Fishing Frenzy",
+      "id": "fishing-frenzy",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: weight, lure. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Fishing Frenzy",
+      "id": "fishing-frenzy",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: weight, lure. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Gold Quest",
+      "id": "gold-quest",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: gold. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Laser Tag",
+      "id": "laser-tag",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Mini Mine",
+      "id": "mini-mine",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Monster Brawl",
+      "id": "monster-brawl",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: level. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Monster Brawl",
+      "id": "monster-brawl",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: level. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Monster Brawl",
+      "id": "monster-brawl",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: level. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Pirate Pool",
+      "id": "pirate-pool",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Pirate Pool",
+      "id": "pirate-pool",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Plushie Panic",
+      "id": "plushie-panic",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Plushie Panic",
+      "id": "plushie-panic",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Racing",
+      "id": "racing",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: progress. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Star Grazer",
+      "id": "star-grazer",
+      "context": "live",
+      "plus": true,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Study",
+      "id": "study",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Study",
+      "id": "study",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Tower Defense",
+      "id": "tower-defense",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: tokens, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Tower Defense",
+      "id": "tower-defense",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: tokens, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Tower Defense",
+      "id": "tower-defense",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: tokens, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Tower Defense 2",
+      "id": "tower-defense-2",
+      "context": "live",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: coins, health, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Tower Defense 2",
+      "id": "tower-defense-2",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: coins, health, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Tower Defense 2",
+      "id": "tower-defense-2",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: coins, health, round. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Zorblitz",
+      "id": "zorblitz",
+      "context": "solo",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Zorblitz",
+      "id": "zorblitz",
+      "context": "homework",
+      "plus": false,
+      "seasonal": false,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Candy Quest",
+      "id": "candy-quest",
+      "context": "live",
+      "plus": false,
+      "seasonal": true,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Santa’s Workshop",
+      "id": "santas-workshop",
+      "context": "live",
+      "plus": false,
+      "seasonal": true,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "Request local class state updates for observed keys: toys, toysPerQ. No server acceptance claim.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        }
+      },
+      "note": "Historical field names only. Live, solo and homework are separate unverified targets."
+    },
+    {
+      "mode": "Egg Hunt",
+      "id": "egg-hunt",
+      "context": "live",
+      "plus": false,
+      "seasonal": true,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    },
+    {
+      "mode": "Tag or Treat",
+      "id": "tag-or-treat",
+      "context": "live",
+      "plus": false,
+      "seasonal": true,
+      "officialSource": "https://help.blooket.com/hc/en-us/articles/21408591795351-Blooket-Game-Mode-Previews",
+      "routeEvidence": "Candidate route names; current live detection has not been verified.",
+      "features": {
+        "highlight": {
+          "method": "Read exposed correct-answer text; mark matching visible answer elements.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "autoAnswer": {
+          "method": "Click one matching visible answer per question, only when enabled.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "not tested"
+        },
+        "values": {
+          "method": "No researched value mapping implemented for this mode.",
+          "source": "https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats",
+          "researchedOn": "2026-11-12",
+          "testedOn": null,
+          "result": "unsupported"
+        }
+      },
+      "note": "Generic answer reader only. Value tools are unsupported in this release; this is not a claim about what Blooket permits."
+    }
+  ]
+}

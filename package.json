@@ -1,0 +1,20 @@
+{
+  "name": "vin-cent",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Blooket browser-tool research, a local demo, and a self-contained bookmarklet",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "node scripts/serve.mjs",
+    "test": "npm run build && node --test tests/*.test.mjs && playwright test",
+    "test:unit": "node --test tests/*.test.mjs",
+    "test:browser": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "esbuild": "0.25.12",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

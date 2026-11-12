@@ -1,0 +1,12 @@
+{
+  "checkedAt": "2026-11-12T22:40:10.554Z",
+  "target": "https://play.blooket.com/",
+  "authenticated": false,
+  "gameJoined": false,
+  "liveFeaturesTested": false,
+  "httpStatus": 403,
+  "finalUrl": "https://play.blooket.com/play",
+  "title": "Just a moment...",
+  "gameCodeInputPresent": false,
+  "note": "The public entry page returned a browser challenge (HTTP 403). No game was joined or feature tested."
+}
