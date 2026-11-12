@@ -57,8 +57,11 @@ export function answerTargets(doc, question) {
   const elements = Array.from(doc.querySelectorAll(selector));
   return elements.filter(el => {
     if (elements.some(other => other !== el && el.contains(other))) return false;
-    if (el.closest('#vin-cent-panel') || el.disabled || el.getAttribute('aria-disabled') === 'true') return false;
+    if (el.closest('#vin-cent-panel, [hidden], [aria-hidden="true"]') || el.matches(':disabled') || el.getAttribute('aria-disabled') === 'true') return false;
     if (!el.getClientRects().length) return false;
+    if (el.checkVisibility?.({ checkOpacity: true, checkVisibilityCSS: true }) === false) return false;
+    const style = doc.defaultView.getComputedStyle(el);
+    if (style.visibility !== 'visible' || style.opacity === '0') return false;
     const text = el.getAttribute('data-answer') ?? el.querySelector('[class*="answerText"]')?.textContent ?? el.textContent;
     return correct.has(normalize(text));
   });

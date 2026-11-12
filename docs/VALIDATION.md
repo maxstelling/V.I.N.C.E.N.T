@@ -4,13 +4,14 @@ Checked on **12 November 2026** on macOS, using Chromium **156.0.8078.4**. The b
 
 ## Passing checks
 
-`npm test` passed **5 unit checks and 40 browser tests** with no skipped tests:
+`npm test` passed **5 unit checks and 41 browser tests** with no skipped tests:
 
 - All 28 mode adapters detect their own route in an actual React 18 controlled fixture. Visible answer matching and the offered value fields are checked for each mode. These are synthetic pages, not live Blooket games.
 - Demo highlighting, single-answer automation, question changes, value updates, mode switching, Close and reopening work.
 - The generated `javascript:` URL executes directly in the controlled browser. Duplicate launches focus one panel. The tests do not substitute `eval` for bookmarklet execution.
 - Auto-answer clicks once per unchanged question. Stop All clears its timer and marks. Close removes the panel, style and event listeners. Submitted values are not silently reverted.
 - Missing answer data and unknown routes disable answer tools. Hook-stored question data can be read in the fixture; hook-only values remain unavailable.
+- Hidden, transparent, accessibility-hidden and disabled choices are excluded from answer matching and automation.
 - Blank, negative, fractional and excessive values are rejected. Stale value forms cannot edit the previous mode after navigation.
 - Keyboard tabs, arrow navigation, Home/End, Escape, coverage search, clipboard copying and the manual-copy fallback work.
 - A restrictive CSP blocks the launcher; the implementation does not bypass it.

@@ -133,6 +133,24 @@ test('missing answers, unknown routes and hook-only values fail clearly', async 
   await expect(panel(page).locator('input')).toHaveCount(0);
 });
 
+test('hidden, transparent and accessibility-hidden choices are not clicked', async ({ page }) => {
+  for (const hiddenBy of ['visibility', 'opacity', 'aria-hidden', 'disabled-fieldset']) {
+    await fixture(page);
+    await page.locator('button[data-answer=Alpha]').evaluate((element, kind) => {
+      if (kind === 'visibility') element.style.visibility = 'hidden';
+      if (kind === 'opacity') element.style.opacity = '0';
+      if (kind === 'aria-hidden') element.setAttribute('aria-hidden', 'true');
+      if (kind === 'disabled-fieldset') {
+        const parent = document.createElement('fieldset'); parent.disabled = true;
+        element.before(parent); parent.append(element);
+      }
+    }, hiddenBy);
+    await openBookmarklet(page);
+    await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+    expect(await page.evaluate(() => window.fixtureClicks)).toBe(0);
+  }
+});
+
 test('navigation stops automation and stale value edits cannot change the previous mode', async ({ page }) => {
   await fixture(page); await openBookmarklet(page);
   await panel(page).getByRole('button', { name: 'Auto-answer', exact: true }).click();
