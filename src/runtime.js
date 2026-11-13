@@ -28,7 +28,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
       </nav>
       <div class="body">
         <section id="answers" role="tabpanel" aria-labelledby="tab-answers">
-          <div id="review-tools" hidden><p class="note">Select Show all answers on this review page, then copy its key. In the game, open V.I.N.C.E.N.T and load the copied key.</p><button id="copy-review-key" class="apply">Copy review answer key</button><textarea id="review-key" aria-label="Review answer key to copy" readonly hidden></textarea></div>
+          <div id="review-tools" hidden><p class="note">Select Show all answers on this review page, then copy its key. In the game, open V.I.N.C.E.N.T and load the copied key.</p><button id="copy-review-key" class="apply">Copy review answer key</button><div id="review-export" hidden><label class="name" for="review-key">Key ready to share</label><p id="review-key-info" class="hint"></p><textarea id="review-key" aria-label="Review answer key to copy" readonly></textarea><a id="download-review-key" class="download" download="vincent-answer-key.json">Download key (.json)</a><p class="hint">Share the full text or file. Recipients can paste the key into their game panel. Nothing is uploaded.</p></div></div>
           <div id="play-tools">
           <div class="row"><div><span class="name">Highlight answers</span><span class="hint">Mark readable correct choices</span></div><button class="toggle" id="highlight" aria-label="Highlight answers" aria-pressed="false">Off</button></div>
           <div class="row"><div><span class="name">Auto-answer</span><span class="hint">Select one answer per question</span></div><button class="toggle" id="auto" aria-label="Auto-answer" aria-pressed="false">Off</button></div>
@@ -56,6 +56,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   let closed = false;
   let lastAnswered = null;
   let href = location.href;
+  let reviewKeyURL = null;
   const marks = new Map();
   const token = `vin-${Math.random().toString(36).slice(2)}`;
   const pageStyle = document.createElement('style');
@@ -121,6 +122,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   }
   function refresh({ replaceAdapter = false } = {}) {
     if (replaceAdapter && !suppliedAdapter && (!adapter?.detect() || location.href !== href)) {
+      clearReviewExport();
       adapter?.clearAnswerKey?.(); adapter = createLiveAdapter();
     }
     href = location.href;
@@ -197,12 +199,23 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   $('#clear-key').addEventListener('click', () => {
     stop('Answer key cleared.'); adapter?.clearAnswerKey?.(); $('#answer-key-input').value = ''; refresh();
   });
+  function clearReviewExport() {
+    if (reviewKeyURL) URL.revokeObjectURL(reviewKeyURL);
+    reviewKeyURL = null;
+    $('#review-key').value = ''; $('#review-export').hidden = true;
+    $('#download-review-key').removeAttribute('href');
+  }
   $('#copy-review-key').addEventListener('click', async () => {
     try {
       const key = adapter.captureKey(); const text = JSON.stringify(key);
+      clearReviewExport();
       const box = $('#review-key'); box.value = text;
-      try { await navigator.clipboard.writeText(text); status(`${key.questions.length} questions copied. Open the game panel and paste into Load a review answer key.`); }
-      catch { box.hidden = false; box.focus(); box.select(); status(`${key.questions.length} questions ready. Copy the selected key, then load it in the game panel.`); }
+      reviewKeyURL = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+      $('#download-review-key').href = reviewKeyURL;
+      $('#review-key-info').textContent = `${key.questions.length} questions. Ready to copy or download.`;
+      $('#review-export').hidden = false;
+      try { await navigator.clipboard.writeText(text); if (!closed) status(`${key.questions.length} questions copied. The key is also shown below, ready to share or download.`); }
+      catch { if (!closed) { box.focus(); box.select(); status(`${key.questions.length} questions ready. Copy the selected key or download it below.`); } }
     } catch (error) { status(error.message); }
   });
   $('#check-layout').addEventListener('click', () => {
@@ -243,6 +256,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   function close() {
     if (closed) return;
     stop(); closed = true;
+    clearReviewExport();
     adapter?.clearAnswerKey?.();
     window.removeEventListener('popstate', onNavigation);
     window.removeEventListener('hashchange', onNavigation);

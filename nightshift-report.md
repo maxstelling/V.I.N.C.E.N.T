@@ -29,3 +29,11 @@ Public repository: https://github.com/maxstelling/V.I.N.C.E.N.T
 4. Turn on Highlight answers. Check that the text hint and blue outline identify the correct answer across several questions.
 
 [Full guide](docs/ANSWER-PROMPTER.md). Once you confirm that live prompting works, the next feature can begin. Auto-answer and Gold editing were left at their previous support status.
+
+## Follow-up: shareable key in the GUI
+
+The copied key now appears immediately in a labelled read-only box. Download key (.json) saves the same full key for manual distribution. No upload or message is sent. Closing the panel or changing pages clears the visible export and releases its download URL.
+
+All 11 unit checks and 47 browser tests passed. Tests compare the downloaded file with the clipboard and visible key, and check blocked clipboard access. The Safari saved bookmark was not replaced in this follow-up because the user changed the active window during the update attempt. The new controls require replacing the older saved address from the local Setup page.
+
+The later question about working without a key was answered: the checked Gold Quest layout does not expose correctness before submission. No AI service, paid API, backend or alternative answer source was added.

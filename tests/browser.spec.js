@@ -98,6 +98,17 @@ test('review export transfers into a game page and malformed replacement clears 
   await expect(panel(page).locator('.status').last()).toContainText('2 questions copied');
   const copied = await page.evaluate(() => navigator.clipboard.readText());
   expect(JSON.parse(copied).questions).toHaveLength(2);
+  const visibleKey = panel(page).getByRole('textbox', { name: 'Review answer key to copy', exact: true });
+  await expect(visibleKey).toBeVisible();
+  await expect(visibleKey).toHaveValue(copied);
+  await expect(visibleKey).toHaveAttribute('readonly', '');
+  const downloadEvent = page.waitForEvent('download');
+  await panel(page).getByRole('link', { name: 'Download key (.json)', exact: true }).click();
+  const download = await downloadEvent;
+  expect(download.suggestedFilename()).toBe('vincent-answer-key.json');
+  const chunks = [];
+  for await (const chunk of await download.createReadStream()) chunks.push(chunk);
+  expect(Buffer.concat(chunks).toString('utf8')).toBe(copied);
   await fixture(page, '/example-game/play/example-player', '?modern&feedback-only&key-images', 'https://gold.blooket.com');
   await openBookmarklet(page);
   await panel(page).getByRole('textbox', { name: 'Answer key', exact: true }).fill(copied);
@@ -116,6 +127,21 @@ test('review export transfers into a game page and malformed replacement clears 
   await expect(panel(page).locator('.status').last()).toContainText('Key not loaded');
   await expect(page.locator('[data-vin-cent-highlight]')).toHaveCount(0);
   await expect(panel(page).locator('#key-status')).toHaveText('No answer key loaded.');
+});
+test('review key stays visible and downloadable when clipboard access is blocked', async ({ page }) => {
+  await fixture(page, '/set/exampleset', '?review', 'https://dashboard.blooket.com');
+  await page.evaluate(() => Object.defineProperty(navigator.clipboard, 'writeText', { value: () => Promise.reject(new Error('Blocked')) }));
+  await page.getByRole('button', { name: 'Show all answers', exact: true }).click();
+  await openBookmarklet(page);
+  await panel(page).getByRole('button', { name: 'Copy review answer key', exact: true }).click();
+  const box = panel(page).getByRole('textbox', { name: 'Review answer key to copy', exact: true });
+  await expect(box).toBeVisible();
+  expect(JSON.parse(await box.inputValue()).questions).toHaveLength(2);
+  await expect(panel(page).getByRole('link', { name: 'Download key (.json)', exact: true })).toBeVisible();
+  await expect(panel(page).getByRole('status')).toContainText('Copy the selected key or download');
+  await panel(page).getByRole('button', { name: 'Close panel', exact: true }).click();
+  await openBookmarklet(page);
+  await expect(panel(page).locator('#review-export')).toBeHidden();
 });
 async function openBookmarklet(page) {
   // Exercise actual javascript: URL execution, not eval(bookmarklet).

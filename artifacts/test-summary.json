@@ -6,11 +6,11 @@
     "failed": 0
   },
   "browserTests": {
-    "passed": 46,
+    "passed": 47,
     "failed": 0,
     "skipped": 0
   },
-  "durationMs": 15036.097000000002,
+  "durationMs": 28327.371,
   "cases": [
     {
       "name": "mode-hosted game URLs open the panel and detect Gold Quest",
@@ -18,7 +18,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 922
+          "durationMs": 5541
         }
       ]
     },
@@ -28,7 +28,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 2822
+          "durationMs": 7268
         }
       ]
     },
@@ -38,7 +38,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1021
+          "durationMs": 5541
         }
       ]
     },
@@ -48,7 +48,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1486
+          "durationMs": 1996
         }
       ]
     },
@@ -58,7 +58,17 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 892
+          "durationMs": 1804
+        }
+      ]
+    },
+    {
+      "name": "review key stays visible and downloadable when clipboard access is blocked",
+      "outcome": "expected",
+      "results": [
+        {
+          "status": "passed",
+          "durationMs": 804
         }
       ]
     },
@@ -68,7 +78,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1316
+          "durationMs": 1994
         }
       ]
     },
@@ -78,7 +88,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 303
+          "durationMs": 874
         }
       ]
     },
@@ -88,7 +98,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1696
+          "durationMs": 1798
         }
       ]
     },
@@ -98,7 +108,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 497
+          "durationMs": 355
         }
       ]
     },
@@ -108,7 +118,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 611
+          "durationMs": 455
         }
       ]
     },
@@ -118,7 +128,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 509
+          "durationMs": 376
         }
       ]
     },
@@ -128,7 +138,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 520
+          "durationMs": 440
         }
       ]
     },
@@ -138,7 +148,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 515
+          "durationMs": 454
         }
       ]
     },
@@ -148,7 +158,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 572
+          "durationMs": 549
         }
       ]
     },
@@ -158,7 +168,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 741
+          "durationMs": 642
         }
       ]
     },
@@ -168,7 +178,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 748
+          "durationMs": 622
         }
       ]
     },
@@ -178,7 +188,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 567
+          "durationMs": 607
         }
       ]
     },
@@ -188,7 +198,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 651
+          "durationMs": 601
         }
       ]
     },
@@ -198,7 +208,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 761
+          "durationMs": 491
         }
       ]
     },
@@ -208,7 +218,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 669
+          "durationMs": 593
         }
       ]
     },
@@ -218,7 +228,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 647
+          "durationMs": 598
         }
       ]
     },
@@ -228,7 +238,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 528
+          "durationMs": 435
         }
       ]
     },
@@ -238,7 +248,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 582
+          "durationMs": 432
         }
       ]
     },
@@ -248,7 +258,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 774
+          "durationMs": 557
         }
       ]
     },
@@ -258,7 +268,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 565
+          "durationMs": 435
         }
       ]
     },
@@ -268,7 +278,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 503
+          "durationMs": 481
         }
       ]
     },
@@ -278,7 +288,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1219
+          "durationMs": 576
         }
       ]
     },
@@ -288,7 +298,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1044
+          "durationMs": 467
         }
       ]
     },
@@ -298,7 +308,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 982
+          "durationMs": 401
         }
       ]
     },
@@ -308,7 +318,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 716
+          "durationMs": 588
         }
       ]
     },
@@ -318,7 +328,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 717
+          "durationMs": 592
         }
       ]
     },
@@ -328,7 +338,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 593
+          "durationMs": 425
         }
       ]
     },
@@ -338,7 +348,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 521
+          "durationMs": 454
         }
       ]
     },
@@ -348,7 +358,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 737
+          "durationMs": 623
         }
       ]
     },
@@ -358,7 +368,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 583
+          "durationMs": 516
         }
       ]
     },
@@ -368,7 +378,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 582
+          "durationMs": 402
         }
       ]
     },
@@ -378,7 +388,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 3932
+          "durationMs": 3860
         }
       ]
     },
@@ -388,7 +398,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 829
+          "durationMs": 701
         }
       ]
     },
@@ -398,7 +408,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 974
+          "durationMs": 885
         }
       ]
     },
@@ -408,7 +418,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1273
+          "durationMs": 1209
         }
       ]
     },
@@ -418,7 +428,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 622
+          "durationMs": 727
         }
       ]
     },
@@ -428,7 +438,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 1451
+          "durationMs": 616
         }
       ]
     },
@@ -438,7 +448,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 258
+          "durationMs": 281
         }
       ]
     },
@@ -448,7 +458,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 284
+          "durationMs": 245
         }
       ]
     },
@@ -458,7 +468,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 232
+          "durationMs": 260
         }
       ]
     },
@@ -468,7 +478,7 @@
       "results": [
         {
           "status": "passed",
-          "durationMs": 254
+          "durationMs": 265
         }
       ]
     }

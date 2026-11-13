@@ -37,6 +37,10 @@ input { min-width: 0; width: 100%; border: 1px solid #455574; background: #0b142
 textarea { display: block; resize: vertical; width: 100%; min-height: 76px; max-height: 160px; margin: 12px 0; border: 1px solid #455574; border-radius: 8px; background: #0b1425; color: #edf2ff; padding: 10px; font-size: 12px; }
 #key-form { margin-top: 20px; padding-top: 18px; border-top: 1px solid #34435f; }
 #review-tools .apply { margin-top: 16px; }
+#review-export { margin-top: 20px; }
+.download { display: inline-block; padding: 10px 12px; border: 1px solid #455574; border-radius: 8px; font-size: 12px; text-decoration: none; }
+.download:hover { background: #22324c; }
+.download:focus-visible { outline: 3px solid #8dc4ff; outline-offset: 3px; }
 #prompt-answer { margin-top: 16px; }
 a { color: #a7caff; }
 ul { padding-left: 18px; font-size: 12px; color: #b6c6e1; }

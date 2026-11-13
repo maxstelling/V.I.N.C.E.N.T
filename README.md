@@ -19,7 +19,7 @@ Download the repository ZIP, extract it, and open **index.html** in Chrome or Ed
 
 From the mockup’s Setup section, drag **V.I.N.C.E.N.T** to your bookmarks bar, or copy the address into a new bookmark’s URL field. Open a Blooket game and select the saved bookmark.
 
-For the new prompter, follow the [review-key steps](docs/ANSWER-PROMPTER.md): show the review answers, copy the key, load it in the game panel, then turn on Highlight answers. It matches question text, picture, audio and choices. It leaves unknown questions unmarked. Auto-answer is disabled while a key is loaded.
+For the new prompter, follow the [review-key steps](docs/ANSWER-PROMPTER.md): show the review answers, copy the key, load it in the game panel, then turn on Highlight answers. It matches question text, picture, audio and choices. It leaves unknown questions unmarked. Auto-answer is disabled while a key is loaded. Copied review keys appear in the GUI immediately and can be downloaded as a JSON file for sharing.
 
 The panel starts with all tools off. Missing answer data disables answer controls unless a review key is loaded. Only mapped, finite numeric fields on a React class component are offered for editing. Value updates are labelled local and never claimed as server-confirmed. Hook-based answers can be read when the expected question shape is exposed; hook-only value editing is not implemented.
 

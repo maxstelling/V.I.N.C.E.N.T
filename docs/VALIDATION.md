@@ -4,7 +4,7 @@ Local checks repeated on **13 November 2026** on macOS, using Chromium **156.0.8
 
 ## Passing checks
 
-`npm test` passed **11 unit checks and 46 browser tests** with no skipped tests:
+`npm test` passed **11 unit checks and 47 browser tests** with no skipped tests:
 
 - All 28 mode adapters detect their own route in an actual React 18 controlled fixture. Visible answer matching and the offered value fields are checked for each mode. These are synthetic pages, not live Blooket games.
 - Demo highlighting, single-answer automation, question changes, value updates, mode switching, Close and reopening work.
@@ -29,6 +29,10 @@ The updated self-contained bookmark was saved in the existing Safari School book
 Controlled tests export a review key, load it into a modern game fixture without pre-answer correctness flags, and highlight the expected text before feedback. The tests distinguish equal prompts by picture, handle reordered choices, clear hints on missing matches, confirm zero answer clicks, and test Stop All, clearing, refresh and malformed replacements. Unit checks reject conflicting answers, duplicate choices, invalid media addresses and oversized keys, and strip unrelated fields.
 
 **The key-based prompter has not yet been confirmed in a current live game.** The prior authenticated host session is locked. Public-review capture and fixture results do not prove native live prompting. Auto-answer and value editing were not expanded in this pass. The next feature waits for user confirmation. See [the prompter guide](ANSWER-PROMPTER.md).
+
+## Key sharing check — 13 November 2026
+
+The GUI now shows the complete review key immediately after capture. A controlled browser test confirms that the downloaded JSON file exactly matches the clipboard and visible text. Clipboard failure still leaves the full key and download link available. Closing and reopening clears the export. The new sharing controls were not tested in native Safari; the active window changed during the bookmark-update attempt. Replace the saved bookmark address to install the new GUI.
 
 ## Safari launcher fix
 
