@@ -42,6 +42,11 @@ The table below concerns live Blooket, not the local demo. Only the checked Gold
 | Egg Hunt (seasonal) | live | Not tested / not tested | None implemented | Unsupported |
 | Tag or Treat (seasonal) | live | Not tested / not tested | None implemented | Unsupported |
 
+## Review-key answer prompter
+
+Added 13 November 2026. Public review copying works in native Safari (30 questions). Exact matching and highlighting work in a controlled Chromium game fixture. **Live game prompting remains not tested**, pending user confirmation. These checks do not change the historical direct-reader results in the table above. See [the setup steps](ANSWER-PROMPTER.md). Auto-answer and value editing have not been expanded.
+
+
 ## Methods and evidence
 
 The [historical source](https://github.com/LiL-Zapped/Blooket-GUI/blob/main/The%20Cheats) contains generic answer readers and mode-specific local state writes. Candidate field names are taken from its corresponding mode sections, not guessed from a resource name. Cyber Hack uses historical Crypto Hack field names; this rename does not establish current compatibility. The newer and seasonal modes without mapped fields retain explicit unsupported value controls. The runtime does not expose another mode’s fields. Gold Quest mode-hosted detection was checked in native Safari. Other candidate routes require independent current-page verification.

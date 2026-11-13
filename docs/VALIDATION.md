@@ -1,10 +1,10 @@
 # Validation record
 
-Checked on **12 November 2026** on macOS, using Chromium **156.0.8078.4**. The browser version is recorded in [preview-check.json](../artifacts/preview-check.json); this is a local browser result, not Windows or ChromeOS certification.
+Local checks repeated on **13 November 2026** on macOS, using Chromium **156.0.8078.4**. The browser version is recorded in [preview-check.json](../artifacts/preview-check.json); this is a local browser result, not Windows or ChromeOS certification.
 
 ## Passing checks
 
-`npm test` passed **6 unit checks and 44 browser tests** with no skipped tests:
+`npm test` passed **11 unit checks and 46 browser tests** with no skipped tests:
 
 - All 28 mode adapters detect their own route in an actual React 18 controlled fixture. Visible answer matching and the offered value fields are checked for each mode. These are synthetic pages, not live Blooket games.
 - Demo highlighting, single-answer automation, question changes, value updates, mode switching, Close and reopening work.
@@ -22,6 +22,14 @@ Checked on **12 November 2026** on macOS, using Chromium **156.0.8078.4**. The b
 
 The separate preview script also opened `index.html` directly through `file://` and successfully used demo auto-answer. End users do not need the development server or Node.js for the included built mockup.
 
+## Review-key prompter check — 13 November 2026
+
+The updated self-contained bookmark was saved in the existing Safari School bookmark. It opened on a public question-set review. After Blooket’s Show all answers was selected, Copy review answer key reported **30 questions copied**. The generated local key was not saved in the repository. No account sign-in or locked private-window authentication was bypassed.
+
+Controlled tests export a review key, load it into a modern game fixture without pre-answer correctness flags, and highlight the expected text before feedback. The tests distinguish equal prompts by picture, handle reordered choices, clear hints on missing matches, confirm zero answer clicks, and test Stop All, clearing, refresh and malformed replacements. Unit checks reject conflicting answers, duplicate choices, invalid media addresses and oversized keys, and strip unrelated fields.
+
+**The key-based prompter has not yet been confirmed in a current live game.** The prior authenticated host session is locked. Public-review capture and fixture results do not prove native live prompting. Auto-answer and value editing were not expanded in this pass. The next feature waits for user confirmation. See [the prompter guide](ANSWER-PROMPTER.md).
+
 ## Safari launcher fix
 
 The saved bookmark was checked in native Safari. It incorrectly rejected the real `gold.blooket.com` game host because it allowed only the main and play hosts. Host checks and mode detection now support Blooket’s mode subdomains, and the build also targets Safari 16 syntax.
@@ -32,7 +40,7 @@ The corrected address was saved into the existing Safari bookmark. Selecting it 
 
 A controlled single-player Gold Quest game was joined in native Safari. Before submitting an answer, the inspected question contained text, choices and media metadata, but no readable correct-answer list. Every inspected choice correctness flag was false. A manual answer was accepted by the game and displayed **CORRECT**. After that response, correctness flags became available and feedback contained `correctAnswers`; the answer buttons were already disabled. V.I.N.C.E.N.T did not select that manual answer.
 
-Answer highlighting and auto-answer are therefore **unsupported in this checked live layout**. The new reader can use current per-choice React correctness flags only when they are actually exposed for an unanswered visible choice. It never assumes an all-false set identifies a correct answer or treats feedback for an answered question as a future answer. Controlled tests cover these cases and React alternate-tree changes.
+Direct answer reading for highlighting and auto-answer is therefore **unsupported in this checked live layout**. The later review-key path is a separate method whose live result remains untested. The new reader can use current per-choice React correctness flags only when they are actually exposed for an unanswered visible choice. It never assumes an all-false set identifies a correct answer or treats feedback for an answered question as a future answer. Controlled tests cover these cases and React alternate-tree changes.
 
 The current game had no class components with mapped numeric state. Its Gold editor is also **unsupported**; no value update or server-accepted value change was performed. Other modes and solo/homework variants remain untested. The Support tab includes a read-only page-layout check that reports field names and counts, without exporting question text, player identifiers, credentials or session values.
 

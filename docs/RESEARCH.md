@@ -31,7 +31,7 @@ The catalog follows [Blooket’s official mode previews](https://help.blooket.co
 
 A bookmarklet is a saved `javascript:` URL. The browser executes it against the active page when allowed. A separate mockup website cannot directly read another site’s tab because of the [same-origin policy](https://developer.mozilla.org/en-US/docs/Web/Security/Defenses/Same-origin_policy). A browser extension is another possible delivery method, but it adds installation and permissions and is outside this release. Extension scripts also have [separate execution worlds](https://developer.chrome.com/docs/extensions/develop/concepts/content-scripts), so copying a page script into an extension does not guarantee access to the same variables.
 
-The generated bookmarklet contains its runtime and styles. It has no remote loader, `eval`, credential reader or outbound logging. Browser policy and a site’s Content Security Policy can still block [javascript: URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/javascript). Its roughly 31 KB address has opened in native Safari; source size alone does not establish other target-browser compatibility.
+The generated bookmarklet contains its runtime and styles. It has no remote loader, `eval`, credential reader or outbound logging. Browser policy and a site’s Content Security Policy can still block [javascript: URLs](https://developer.mozilla.org/en-US/docs/Web/URI/Reference/Schemes/javascript). Its self-contained address has opened in native Safari; source size alone does not establish other target-browser compatibility.
 
 ## Blooket’s rules
 
@@ -46,3 +46,13 @@ Blooket’s [Terms of Service](https://www.blooket.com/terms), checked on the re
 - Do not publish session data, real player names, cookies, screenshots of private games or credentials as evidence.
 
 The current Gold Quest live layout was checked in native Safari. No usable correctness data was found before submission; feedback exposed correctness only after a manual answer. The older class-state value editor was also unavailable. Those live tools are marked unsupported in the checked layout. See [the live check](VALIDATION.md#safari-live-check). Other modes remain untested; controlled fixtures do not establish their live compatibility.
+
+## Review-key prompting — 13 November 2026
+
+Blooket’s [official hosting guide](https://help.blooket.com/hc/en-us/articles/15984215236503-How-to-Host-a-Blooket-Game) documents a Show Answers option on set previews. The public review inspected in native Safari exposes complete multiple-choice records under React `currentQuestion`, including text, choices, image/audio references and `correctAnswers`. The new review adapter copies only those question fields after Show all answers is selected. It copied 30 questions successfully. No real answer bank is committed.
+
+The player adapter can read the active question without a correctness flag. An imported key matches the normalized question text, image and audio URLs, and the full unordered choice list. Reordered choices therefore work; repeated text with a different picture stays separate. A missing or conflicting key never supplies a guessed answer. Only text choices are supported. Different media addresses, edited sets, duplicate choices and unreadable question shapes can prevent a match.
+
+Keys are plain JSON, limited to 1 MB and 1000 records. Unknown fields are discarded. No storage, API call, remote answer lookup or model service is used. Clear key, Close and game navigation remove the key; Stop All removes prompts and marks but keeps the key ready to use. Clipboard content remains until replaced by the user.
+
+This pass adds prompting only. A loaded key disables Auto-answer. Public review capture and controlled game tests passed; current live prompting still needs user confirmation. [Setup and limits](ANSWER-PROMPTER.md).

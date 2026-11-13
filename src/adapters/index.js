@@ -1,9 +1,12 @@
 import { MODES, detectPageMode, validateValue } from '../modes.js';
-import { collectReactViews, questionFrom, answerTargets, exposedChoiceQuestion } from './react.js';
+import { collectReactViews, questionFrom, answerTargets, exposedChoiceQuestion, currentChoiceQuestion } from './react.js';
+import { createReviewAdapter, isReviewPage } from './review.js';
+import { matchAnswerKey, parseAnswerKey } from '../answer-key.js';
 
 // One adapter instance per mode. New layouts/fields can be handled here without
 // changing the panel. No server writes are made or asserted by these adapters.
 export function createModeAdapter(mode, doc = document) {
+  let answerKey = null;
   return {
     mode,
     detect: () => detectPageMode(doc.location)?.id === mode.id,
@@ -11,22 +14,30 @@ export function createModeAdapter(mode, doc = document) {
       const views = collectReactViews(doc);
       const questions = views.map(questionFrom).filter(Boolean);
       const exposed = exposedChoiceQuestion(doc);
-      const question = exposed?.question ?? questions.find(q => answerTargets(doc, q).length) ?? null;
+      const direct = exposed?.question ?? questions.find(q => answerTargets(doc, q).length) ?? null;
+      const active = answerKey ? currentChoiceQuestion(doc) : null;
+      const matched = active ? matchAnswerKey(answerKey, active.object) : null;
+      const question = direct ?? (matched ? { object: active.object, key: active.key, correct: matched.correctAnswers } : null);
+      const answerSource = direct ? 'page data' : matched ? 'answer key' : null;
       const fields = mode.fields.flatMap(spec => {
         const view = views.find(v => v.owner && Object.hasOwn(v.state, spec.key) && Number.isFinite(v.state[spec.key]));
         return view ? [{ ...spec, value: view.state[spec.key], owner: view.owner }] : [];
       });
-      return { question, targets: exposed?.targets ?? answerTargets(doc, question), fields,
-        reason: question ? '' : !views.length ? 'This page does not expose a supported React layout.' : !questions.length ? 'No readable correct-answer data was found in this page layout.' : 'Answer data was found, but no visible choices matched it.',
+      return { question, targets: exposed?.targets ?? answerTargets(doc, question), fields, answerSource,
+        canAutoAnswer: !!direct,
+        reason: question ? '' : answerKey ? 'Waiting for an exact question, picture and choices match in the loaded key.' : !views.length ? 'This page does not expose a supported React layout.' : !questions.length ? 'No readable correct-answer data was found in this page layout. Load a review answer key to use the prompter.' : 'Answer data was found, but no visible choices matched it.',
         evidence: 'Page data detection does not prove server acceptance. Check the support record for live results.' };
     },
+    setAnswerKey(input) { answerKey = parseAnswerKey(input); return answerKey.questions.length; },
+    clearAnswerKey() { answerKey = null; },
+    get answerKeyCount() { return answerKey?.questions.length ?? 0; },
     diagnostics() {
       const views = collectReactViews(doc);
       const relevance = value => (value.match(/question|answer|correct|gold|score|choice/gi) ?? []).length;
       const shapes = objects => [...new Set(objects.filter(value => value && typeof value === 'object')
         .map(value => Object.keys(value).sort().slice(0, 24).join(', ')).filter(Boolean))]
         .sort((a, b) => relevance(b) - relevance(a)).slice(0, 12);
-      const questions = views.flatMap(view => [view.state.question, view.state.currentQuestion, view.props.question, view.props.client?.question]).filter(Boolean);
+      const questions = views.flatMap(view => [view.state.question, view.state.currentQuestion, view.props.question, view.props.currentQuestion, view.props.client?.question]).filter(Boolean);
       const flags = views.filter(view => Object.hasOwn(view.props, 'isCorrect')).map(view =>
         typeof view.props.isCorrect === 'boolean' ? `boolean:${view.props.isCorrect}` : 'unavailable');
       return {
@@ -57,6 +68,7 @@ export function createModeAdapter(mode, doc = document) {
 }
 
 export function createLiveAdapter(doc = document) {
+  if (isReviewPage(doc.location)) return createReviewAdapter(doc);
   const mode = detectPageMode(doc.location);
   return mode ? createModeAdapter(mode, doc) : null;
 }

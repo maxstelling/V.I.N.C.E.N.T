@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { readFile } from 'node:fs/promises';
 import { MODES } from '../src/modes.js';
+import { KEY_FORMAT } from '../src/answer-key.js';
 
 const bookmarklet = (await readFile('dist/bookmarklet.txt', 'utf8')).trim();
 const local = 'http://127.0.0.1:43917';
@@ -16,7 +17,7 @@ async function fixture(page, route = '/play/gold', query = '', origin = 'https:/
     await request.fulfill({ response });
   });
   await page.goto(origin + route + query);
-  await expect(page.getByRole('heading')).toContainText('Controlled React');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Controlled React');
 }
 
 test('mode-hosted game URLs open the panel and detect Gold Quest', async ({ page }) => {
@@ -59,6 +60,62 @@ test('feedback-only correctness never enables an unanswered choice', async ({ pa
   await page.locator('#fixture-next').click();
   await panel(page).getByRole('button', { name: 'Refresh data', exact: true }).click();
   await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+});
+
+test('a review key prompts before feedback, follows pictures and never submits answers', async ({ page }) => {
+  await fixture(page, '/example-game/play/example-player', '?modern&feedback-only&key-images', 'https://gold.blooket.com');
+  await openBookmarklet(page);
+  const key = { format: KEY_FORMAT, version: 1, questions: [0, 1].map(number => ({
+    prompt: 'Which animal?', image: `https://example.invalid/animal-${number}.png`, answers: ['Alpha', 'Beta'], correctAnswers: [number ? 'Beta' : 'Alpha']
+  })) };
+  await panel(page).getByRole('textbox', { name: 'Answer key', exact: true }).fill(JSON.stringify(key));
+  await panel(page).getByRole('button', { name: 'Load key', exact: true }).click();
+  await expect(panel(page).getByRole('button', { name: 'Auto-answer', exact: true })).toBeDisabled();
+  await panel(page).getByRole('button', { name: 'Highlight answers', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await expect(panel(page).locator('#prompt-answer')).toHaveText('From your answer key: Alpha');
+  expect(await page.evaluate(() => window.fixtureClicks)).toBe(0);
+  await page.locator('#fixture-next').click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Beta');
+  await page.locator('#fixture-next').click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveCount(0);
+  await expect(panel(page).locator('#prompt-answer')).toBeHidden();
+  expect(await page.evaluate(() => window.fixtureClicks)).toBe(0);
+  await panel(page).getByRole('button', { name: 'Refresh data', exact: true }).click();
+  await expect(panel(page).locator('#key-status')).toContainText('2 questions loaded');
+  await panel(page).getByRole('button', { name: 'Clear key', exact: true }).click();
+  await expect(panel(page).locator('#key-status')).toHaveText('No answer key loaded.');
+});
+
+test('review export transfers into a game page and malformed replacement clears it', async ({ page, context }) => {
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await fixture(page, '/set/exampleset', '?review', 'https://dashboard.blooket.com');
+  await openBookmarklet(page);
+  await panel(page).getByRole('button', { name: 'Copy review answer key', exact: true }).click();
+  await expect(panel(page).locator('.status').last()).toContainText('Show all answers');
+  await page.getByRole('button', { name: 'Show all answers', exact: true }).click();
+  await panel(page).getByRole('button', { name: 'Copy review answer key', exact: true }).click();
+  await expect(panel(page).locator('.status').last()).toContainText('2 questions copied');
+  const copied = await page.evaluate(() => navigator.clipboard.readText());
+  expect(JSON.parse(copied).questions).toHaveLength(2);
+  await fixture(page, '/example-game/play/example-player', '?modern&feedback-only&key-images', 'https://gold.blooket.com');
+  await openBookmarklet(page);
+  await panel(page).getByRole('textbox', { name: 'Answer key', exact: true }).fill(copied);
+  await panel(page).getByRole('button', { name: 'Load key', exact: true }).click();
+  await panel(page).getByRole('button', { name: 'Highlight answers', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await panel(page).getByRole('button', { name: 'Stop All', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveCount(0);
+  await expect(panel(page).locator('#prompt-answer')).toBeHidden();
+  expect(await page.evaluate(() => window.__VIN_CENT_PANEL__.running)).toBe(false);
+  await expect(panel(page).locator('#key-status')).toContainText('2 questions loaded');
+  await panel(page).getByRole('button', { name: 'Highlight answers', exact: true }).click();
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveText('Alpha');
+  await panel(page).getByRole('textbox', { name: 'Answer key', exact: true }).fill('not an answer key');
+  await panel(page).getByRole('button', { name: 'Load key', exact: true }).click();
+  await expect(panel(page).locator('.status').last()).toContainText('Key not loaded');
+  await expect(page.locator('[data-vin-cent-highlight]')).toHaveCount(0);
+  await expect(panel(page).locator('#key-status')).toHaveText('No answer key loaded.');
 });
 async function openBookmarklet(page) {
   // Exercise actual javascript: URL execution, not eval(bookmarklet).

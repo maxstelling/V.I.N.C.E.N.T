@@ -37,11 +37,27 @@ function ModernFixture() {
   const [index, setIndex] = useState(0);
   const [answered, setAnswered] = useState(false);
   const feedbackOnly = params.has('feedback-only');
-  const questions = [0, 1, 2, 3].map(number => ({ text: 'Modern question ' + number, number, answers: ['Alpha', 'Beta'] }));
+  const questions = [0, 1, 2, 3].map(number => ({
+    text: params.has('key-images') ? 'Which animal?' : 'Modern question ' + number,
+    image: params.has('key-images') ? `https://example.invalid/animal-${number}.png` : '',
+    number, answers: params.has('key-images') && number % 2 ? ['Beta', 'Alpha'] : ['Alpha', 'Beta']
+  }));
   const question = questions[index];
   return h('main', null, h('h1', null, 'Controlled React modern fixture'),
     h(ModernQuestion, { question, currentIndex: index, questions, correctnessAvailable: !feedbackOnly || answered,
       answerSent: feedbackOnly && answered, onAnswer: () => { window.fixtureClicks++; setAnswered(true); } }),
     h('button', { id: 'fixture-next', onClick: () => { setIndex(i => i + 1); setAnswered(false); } }, 'Next'));
 }
-createRoot(document.getElementById('root')).render(h(params.has('modern') ? ModernFixture : params.has('hooks') ? HooksFixture : Fixture));
+function ReviewCard({ currentQuestion, expanded }) {
+  return h('article', null, h('h2', null, currentQuestion.question), expanded ? currentQuestion.answers.map(answer => h('p', { key: answer }, answer)) : null);
+}
+function ReviewFixture() {
+  const [expanded, setExpanded] = useState(false);
+  const questions = [0, 1].map(number => ({ question: 'Which animal?', number,
+    image: `https://example.invalid/animal-${number}.png`, audio: '',
+    answers: ['Alpha', 'Beta'], correctAnswers: [number ? 'Beta' : 'Alpha'] }));
+  return h('main', null, h('h1', null, 'Controlled React review fixture'),
+    h('button', { onClick: () => setExpanded(!expanded) }, expanded ? 'Hide all answers' : 'Show all answers'),
+    ...questions.map(currentQuestion => h(ReviewCard, { key: currentQuestion.number, currentQuestion, expanded })));
+}
+createRoot(document.getElementById('root')).render(h(params.has('review') ? ReviewFixture : params.has('modern') ? ModernFixture : params.has('hooks') ? HooksFixture : Fixture));

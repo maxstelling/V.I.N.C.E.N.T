@@ -28,9 +28,14 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
       </nav>
       <div class="body">
         <section id="answers" role="tabpanel" aria-labelledby="tab-answers">
+          <div id="review-tools" hidden><p class="note">Select Show all answers on this review page, then copy its key. In the game, open V.I.N.C.E.N.T and load the copied key.</p><button id="copy-review-key" class="apply">Copy review answer key</button><textarea id="review-key" aria-label="Review answer key to copy" readonly hidden></textarea></div>
+          <div id="play-tools">
           <div class="row"><div><span class="name">Highlight answers</span><span class="hint">Mark readable correct choices</span></div><button class="toggle" id="highlight" aria-label="Highlight answers" aria-pressed="false">Off</button></div>
           <div class="row"><div><span class="name">Auto-answer</span><span class="hint">Select one answer per question</span></div><button class="toggle" id="auto" aria-label="Auto-answer" aria-pressed="false">Off</button></div>
+          <div id="prompt-answer" class="status" role="note" aria-live="polite" hidden></div>
+          <form id="key-form" hidden><label class="name" for="answer-key-input">Load a review answer key</label><p class="hint">Copy it from the question-set review, then paste it here. It stays in this panel until you clear it or close.</p><textarea id="answer-key-input" placeholder="Paste your V.I.N.C.E.N.T answer key" aria-label="Answer key" maxlength="1000000" required></textarea><div class="input-row"><button class="apply" type="submit">Load key</button><button id="clear-key" type="button">Clear key</button></div><p id="key-status" class="hint" aria-live="polite">No answer key loaded.</p></form>
           <p class="note" id="answer-note"></p>
+          </div>
         </section>
         <section id="values" role="tabpanel" aria-labelledby="tab-values" hidden><div id="fields"></div><p class="note">Local state edits can trigger the game’s normal effects. Server acceptance is not verified.</p></section>
         <section id="support" role="tabpanel" aria-labelledby="tab-support" hidden><p class="note" id="evidence"></p><ul>
@@ -56,7 +61,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   const pageStyle = document.createElement('style');
   pageStyle.textContent = `[${MARK}="${token}"]{outline:4px solid #86bdff!important;outline-offset:3px!important;box-shadow:0 0 0 6px #102c55!important}`;
   document.head.append(pageStyle);
-  const status = message => { $('.status').textContent = message; };
+  const status = message => { $('[role=status]').textContent = message; };
   const clearMarks = () => {
     for (const [element, previous] of marks) {
       if (element.getAttribute(MARK) === token) {
@@ -82,7 +87,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
     highlight = false; auto = false;
     if (timer !== null) window.clearInterval(timer);
     timer = null;
-    clearMarks(); syncButtons(); status(message);
+    clearMarks(); $('#prompt-answer').hidden = true; syncButtons(); status(message);
   }
   function inspect() {
     if (!adapter) return { targets: [], fields: [], question: null, reason: 'No supported game route detected.', evidence: 'Open a game, then select Refresh data. Live compatibility is not verified.' };
@@ -115,14 +120,21 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
     }
   }
   function refresh({ replaceAdapter = false } = {}) {
-    if (replaceAdapter && !suppliedAdapter) adapter = createLiveAdapter();
+    if (replaceAdapter && !suppliedAdapter && (!adapter?.detect() || location.href !== href)) {
+      adapter?.clearAnswerKey?.(); adapter = createLiveAdapter();
+    }
     href = location.href;
     try { snapshot = inspect(); }
     catch { snapshot = { targets: [], fields: [], question: null, reason: 'The page layout could not be read.', evidence: 'This layout is unsupported.' }; }
     $('.mode').textContent = adapter?.mode.name ?? 'Game not detected';
-    $('#answer-note').textContent = snapshot.reason || (demo ? 'Sample answers only. Try the next question.' : 'Answer data found on this page. Live compatibility has not been verified.');
+    $('#answer-note').textContent = snapshot.reason || (demo ? 'Sample answers only. Try the next question.' : snapshot.answerSource === 'answer key' ? 'Exact match from your loaded review key. Prompting only; no answer is submitted.' : 'Answer data found on this page. Live compatibility has not been verified.');
     $('#evidence').textContent = snapshot.evidence;
-    $('#highlight').disabled = $('#auto').disabled = !snapshot.targets.length;
+    $('#highlight').disabled = !snapshot.targets.length && !adapter?.answerKeyCount;
+    $('#auto').disabled = !snapshot.targets.length || snapshot.canAutoAnswer === false || !!adapter?.answerKeyCount;
+    $('#review-tools').hidden = !adapter?.review;
+    $('#play-tools').hidden = !!adapter?.review;
+    $('#key-form').hidden = demo || !adapter?.setAnswerKey;
+    $('#key-status').textContent = adapter?.answerKeyCount ? `${adapter.answerKeyCount} questions loaded. Highlight answers to start the prompter.` : 'No answer key loaded.';
     renderFields();
   }
   function tick() {
@@ -133,12 +145,20 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
     }
     try {
       snapshot = inspect();
+      if (auto && snapshot.canAutoAnswer === false) {
+        auto = false; syncButtons();
+        if (!highlight) { stop('Auto-answer is off. Loaded answer keys support prompting only.'); return; }
+      }
       if (!snapshot.targets.length) {
-        clearMarks();
+        clearMarks(); $('#prompt-answer').hidden = true;
         status('Waiting for readable answer data. No answer selected.');
         return;
       }
-      if (highlight) applyMarks(snapshot.targets);
+      if (highlight) {
+        applyMarks(snapshot.targets);
+        $('#prompt-answer').hidden = false;
+        $('#prompt-answer').textContent = `${demo ? 'Sample answer' : snapshot.answerSource === 'answer key' ? 'From your answer key' : 'From page data'}: ${snapshot.question.correct.join(' / ')}`;
+      }
       if (auto && snapshot.question.key !== lastAnswered) {
         // Record before clicking because the game may synchronously replace the question.
         lastAnswered = snapshot.question.key;
@@ -154,7 +174,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
     syncButtons();
     if (timer !== null) window.clearInterval(timer);
     timer = null;
-    if (!highlight) clearMarks();
+    if (!highlight) { clearMarks(); $('#prompt-answer').hidden = true; }
     if (highlight || auto) {
       tick();
       if (highlight || auto) timer = window.setInterval(tick, 700);
@@ -164,6 +184,27 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   $('#auto').addEventListener('click', () => { auto = !auto; updateRunState(); });
   $('.stop').addEventListener('click', () => stop());
   $('.refresh').addEventListener('click', () => { stop('Data refreshed. All tools off.'); refresh({ replaceAdapter: true }); });
+  $('#key-form').addEventListener('submit', event => {
+    event.preventDefault(); stop('Loading answer key. All tools off.');
+    adapter?.clearAnswerKey?.();
+    try {
+      if (!adapter?.setAnswerKey || !adapter.detect()) throw new Error('Open a supported game before loading a key.');
+      const count = adapter.setAnswerKey($('#answer-key-input').value);
+      $('#answer-key-input').value = ''; refresh();
+      status(`${count} questions loaded. Turn on Highlight answers. Auto-answer remains off.`);
+    } catch (error) { refresh(); status(`Key not loaded: ${error.message}`); }
+  });
+  $('#clear-key').addEventListener('click', () => {
+    stop('Answer key cleared.'); adapter?.clearAnswerKey?.(); $('#answer-key-input').value = ''; refresh();
+  });
+  $('#copy-review-key').addEventListener('click', async () => {
+    try {
+      const key = adapter.captureKey(); const text = JSON.stringify(key);
+      const box = $('#review-key'); box.value = text;
+      try { await navigator.clipboard.writeText(text); status(`${key.questions.length} questions copied. Open the game panel and paste into Load a review answer key.`); }
+      catch { box.hidden = false; box.focus(); box.select(); status(`${key.questions.length} questions ready. Copy the selected key, then load it in the game panel.`); }
+    } catch (error) { status(error.message); }
+  });
   $('#check-layout').addEventListener('click', () => {
     const report = $('#layout-report'); report.hidden = false;
     try {
@@ -202,6 +243,7 @@ export function launch({ adapter: suppliedAdapter, demo = false, mount = null } 
   function close() {
     if (closed) return;
     stop(); closed = true;
+    adapter?.clearAnswerKey?.();
     window.removeEventListener('popstate', onNavigation);
     window.removeEventListener('hashchange', onNavigation);
     window.removeEventListener('pagehide', close);

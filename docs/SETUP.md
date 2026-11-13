@@ -34,11 +34,15 @@ Use current Chrome or Edge. Save the bookmark in that browser, open the game, th
 
 ## Safari on Mac
 
-Open the updated local `index.html`. Select **Copy bookmark address**. In Safari’s bookmarks sidebar, right-click the saved V.I.N.C.E.N.T bookmark, choose **Edit Address**, replace the whole address with the copied address, and select Done. Then open the game tab and select the saved bookmark.
+Open the updated local `index.html`. Select **Copy bookmark address**. In Safari’s bookmarks sidebar, right-click the saved V.I.N.C.E.N.T bookmark, choose **Edit Address**, select the address field, press **Command + A**, and replace the whole address with the copied address, and select Done. Then open the game tab and select the saved bookmark.
 
 Current games can use a separate address such as `gold.blooket.com`, with the game and player identifiers in the path. The launcher now accepts Blooket subdomains and detects the mode from the game hostname. It still rejects lookalike domains. Updating the page or repository alone does not update an existing self-contained bookmark: replace its saved address after updates.
 
 If Blooket reports **Disconnected** or **Failed to join**, rejoin an active game first. Opening the panel cannot restore an expired game session.
+
+## Answer prompter
+
+Use the [review-key setup](ANSWER-PROMPTER.md). It works from a question-set review that you can already open and show answers on. The key stays in memory in the panel. Closing the panel clears it.
 
 ## Use and stop
 
@@ -58,7 +62,7 @@ Check the active tab is a Blooket game and the saved address is complete. Browse
 | Environment | Result |
 |---|---|
 | Local Chromium on macOS, controlled sample pages | See [validation record](VALIDATION.md) |
-| Native Safari on Mac, Gold Quest live | Launcher and mode detection work; answer/value tools unsupported in the checked layout |
+| Native Safari on Mac, Gold Quest live | Launcher, mode detection and public review-key copying work; live key prompting awaits confirmation. Direct answer/value tools unsupported in the checked layout |
 | Real Chromebook Chrome | Not tested: hardware unavailable |
 | School-managed Chromebook | Not tested: managed device unavailable |
 | Windows 11 Chrome | Not tested: OS unavailable |

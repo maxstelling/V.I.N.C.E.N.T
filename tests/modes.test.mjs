@@ -50,6 +50,10 @@ test('build keeps observed live limitations separate from untested modes', async
   assert.doesNotMatch(source, /sourceMappingURL/);
   const support = JSON.parse(await readFile('docs/support.json', 'utf8'));
   assert.equal(support.liveTestedOn, '2026-11-12');
+  assert.equal(support.answerPrompter.reviewCapture.result, 'working');
+  assert.equal(support.answerPrompter.controlledGame.result, 'working');
+  assert.equal(support.answerPrompter.liveGame.result, 'not tested');
+  assert.equal(support.answerPrompter.liveGame.testedOn, null);
   for (const record of support.records) {
     assert.ok(['live', 'solo', 'homework'].includes(record.context));
     for (const feature of Object.values(record.features)) {

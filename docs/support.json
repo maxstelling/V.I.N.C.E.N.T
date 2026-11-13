@@ -1,6 +1,25 @@
 {
   "researchedOn": "2026-11-12",
   "liveTestedOn": "2026-11-12",
+  "answerPrompter": {
+    "method": "Copy a visible question-set review into a local key; match question text, image, audio and unordered choices. Highlight only; no answer submission.",
+    "source": "https://help.blooket.com/hc/en-us/articles/15984215236503-How-to-Host-a-Blooket-Game",
+    "reviewCapture": {
+      "result": "working",
+      "testedOn": "2026-11-13",
+      "environment": "Native macOS Safari, public review, 30 questions copied"
+    },
+    "controlledGame": {
+      "result": "working",
+      "testedOn": "2026-11-13",
+      "environment": "Local Chromium, synthetic modern Gold Quest question layout"
+    },
+    "liveGame": {
+      "result": "not tested",
+      "testedOn": null,
+      "note": "The previous authenticated Safari host session is locked. User confirmation is required before the next feature."
+    }
+  },
   "records": [
     {
       "mode": "Battle Royale",

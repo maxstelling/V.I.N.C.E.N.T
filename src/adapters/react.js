@@ -36,7 +36,7 @@ export function collectReactViews(doc) {
 export function questionFrom(view) {
   const { state, props } = view;
   // A hook may store the question itself, rather than { question: ... }.
-  const question = [state.question, state.currentQuestion, props.question, props.client?.question,
+  const question = [state.question, state.currentQuestion, props.question, props.currentQuestion, props.client?.question,
     state.correctAnswers ? state : null].find(value => value && typeof value === 'object');
   if (!question || typeof question !== 'object') return null;
   const correct = question.correctAnswers ?? question.correctAnswer;
@@ -83,6 +83,38 @@ function currentElementFiber(element) {
   // Compare the HostRoot with FiberRoot.current before reading button props.
   if (root?.stateNode?.current && root.stateNode.current !== root && fiber?.alternate) fiber = fiber.alternate;
   return fiber;
+}
+
+// Read the active question without assuming its answers include correctness.
+// Current game clients expose this question before server feedback arrives.
+export function currentChoiceQuestion(doc) {
+  const elements = visibleAnswerElements(doc);
+  if (elements.length < 2 || elements.length > 8) return null;
+  const records = elements.map(element => {
+    let fiber = currentElementFiber(element);
+    let question;
+    let index;
+    const seen = new Set();
+    while (fiber && !seen.has(fiber) && seen.size < 40) {
+      seen.add(fiber);
+      const props = fiber.memoizedProps ?? {};
+      const state = fiber.stateNode?.state ?? {};
+      const candidate = [props.question, props.currentQuestion, props.client?.question, state.question, state.currentQuestion]
+        .find(value => value && typeof value === 'object' && Array.isArray(value.answers) && typeof (value.text ?? value.question) === 'string');
+      if (!question && candidate) question = candidate;
+      if (index === undefined) index = props.currentIndex ?? props.questionIndex ?? state.questionIndex;
+      fiber = fiber.return;
+    }
+    return { element, question, index };
+  });
+  const question = records[0].question;
+  if (!question || records.some(record => record.question !== question)) return null;
+  if (question.answers.some(answer => typeof answer !== 'string')) return null;
+  const actual = elements.map(element => normalize(element.getAttribute('data-answer') ?? element.querySelector('[class*="answerText"]')?.textContent ?? element.textContent)).sort();
+  const expected = question.answers.map(normalize).sort();
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) return null;
+  return { object: question, elements,
+    key: JSON.stringify([question.text ?? question.question, question.number ?? null, records[0].index ?? null, expected]) };
 }
 
 export function exposedChoiceQuestion(doc) {

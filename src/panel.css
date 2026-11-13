@@ -8,10 +8,10 @@ h2 { margin: 0; font-size: 17px; letter-spacing: .13em; font-weight: 750; }
 .subtitle { color: #aab9d3; margin: 10px 0 0; font-size: 12px; }
 .badge { display: inline-flex; align-items: center; gap: 6px; border-radius: 5px; background: #1f3859; color: #a9d1ff; padding: 3px 7px; font-size: 10px; letter-spacing: .08em; font-weight: 700; text-transform: uppercase; margin-right: 7px; }
 .tabs { display: flex; padding: 10px 12px 0; border-bottom: 1px solid #2c3851; gap: 2px; }
-button, input { font: inherit; }
+button, input, textarea { font: inherit; }
 button { cursor: pointer; border: 1px solid transparent; border-radius: 8px; padding: 9px 12px; background: #22324c; color: #ecf3ff; min-height: 40px; }
 button:hover { background: #2d4263; }
-button:focus-visible, input:focus-visible, [tabindex]:focus-visible { outline: 3px solid #8dc4ff; outline-offset: 3px; }
+button:focus-visible, input:focus-visible, textarea:focus-visible, [tabindex]:focus-visible { outline: 3px solid #8dc4ff; outline-offset: 3px; }
 button:disabled { cursor: not-allowed; opacity: .5; }
 .close { padding: 4px 8px; min-height: 32px; font-size: 12px; color: #bbc9e0; background: transparent; }
 [role=tab] { flex: 1; padding: 12px 6px; background: transparent; border-radius: 5px 5px 0 0; color: #aab9d3; border-bottom: 2px solid transparent; font-size: 12px; }
@@ -34,6 +34,10 @@ footer { border-top: 1px solid #2c3851; padding: 16px 22px; display: flex; align
 .input-row { display: flex; gap: 8px; }
 input { min-width: 0; width: 100%; border: 1px solid #455574; background: #0b1425; border-radius: 8px; color: #edf2ff; padding: 9px 10px; }
 .apply { background: #79afff; color: #091a34; font-size: 12px; font-weight: 700; }
+textarea { display: block; resize: vertical; width: 100%; min-height: 76px; max-height: 160px; margin: 12px 0; border: 1px solid #455574; border-radius: 8px; background: #0b1425; color: #edf2ff; padding: 10px; font-size: 12px; }
+#key-form { margin-top: 20px; padding-top: 18px; border-top: 1px solid #34435f; }
+#review-tools .apply { margin-top: 16px; }
+#prompt-answer { margin-top: 16px; }
 a { color: #a7caff; }
 ul { padding-left: 18px; font-size: 12px; color: #b6c6e1; }
 li { margin: 10px 0; }
